@@ -1,0 +1,17 @@
+{
+  "name": "shewschats",
+  "version": "1.0.0",
+  "description": "A 1:1 chat platform curating two user's roles : a STEM and a SHEW which goal is to connect one to the other depending on their affection needs.",
+  "license": "ISC",
+  "author": "trifoldi solutions",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx @tailwindcss/cli -i ./src/input.css -o ./dist/output.css --watch"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.4",
+    "tailwindcss": "^4.1.4"
+  }
+}
