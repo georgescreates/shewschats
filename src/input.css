@@ -1,1 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 @import "tailwindcss";
+
+@theme {
+    --font-funnel: "Funnel Sans", sans-serif;
+
+    --color-mercury-50: #f7f7f7;
+    --color-mercury-100: #e6e6e6;
+    --color-mercury-200: #dfdfdf;
+    --color-mercury-300: #c8c8c8;
+    --color-mercury-400: #adadad;
+    --color-mercury-500: #999999;
+    --color-mercury-600: #888888;
+    --color-mercury-700: #7b7b7b;
+    --color-mercury-800: #676767;
+    --color-mercury-900: #545454;
+    --color-mercury-950: #363636;
+
+    --color-woodsmoke-50: #f6f6f6;
+    --color-woodsmoke-100: #e7e7e7;
+    --color-woodsmoke-200: #d1d1d1;
+    --color-woodsmoke-300: #b0b0b0;
+    --color-woodsmoke-400: #888888;
+    --color-woodsmoke-500: #6d6d6d;
+    --color-woodsmoke-600: #5d5d5d;
+    --color-woodsmoke-700: #4f4f4f;
+    --color-woodsmoke-800: #454545;
+    --color-woodsmoke-900: #3d3d3d;
+    --color-woodsmoke-950: #191919;
+
+    --color-pizza-50: #fcf9ea;
+    --color-pizza-100: #f8f2c9;
+    --color-pizza-200: #f3e395;
+    --color-pizza-300: #eccc58;
+    --color-pizza-400: #e4b62b;
+    --color-pizza-500: #d19c1d;
+    --color-pizza-600: #b77b17;
+    --color-pizza-700: #925916;
+    --color-pizza-800: #7a4719;
+    --color-pizza-900: #683b1b;
+    --color-pizza-950: #3c1f0c;
+    
+    --color-cinnabar-50: #fef4f2;
+    --color-cinnabar-100: #fde7e3;
+    --color-cinnabar-200: #fdd2cb;
+    --color-cinnabar-300: #fab2a7;
+    --color-cinnabar-400: #f58574;
+    --color-cinnabar-500: #e94f37;
+    --color-cinnabar-600: #d8412a;
+    --color-cinnabar-700: #b53420;
+    --color-cinnabar-800: #962e1e;
+    --color-cinnabar-900: #7d2c1f;
+    --color-cinnabar-950: #44130b;    
+}
+
+
+
+
+.side-menu-squares{
+    height: 4.5rem;
+    width: 4.5rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.0625rem;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    position: relative;
+}
+
+.side-menu-squares::after{
+    content: '';
+
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 50%;
+    height: 4px;
+
+    transform-origin: 50% 0%;
+
+    border-radius: 8px;
+
+    background-color: var(--color-pizza-700);
+
+    display: none;
+}
+
+.side-menu-squares.active{
+    background-color: var(--color-pizza-50);
+}
+
+.side-menu-squares.active::after{
+    display: block;
+}
+
+.side-menu-squares svg{
+    color: var(--color-woodsmoke-950);
+}
+
+.side-menu-squares.active svg{
+    color: var(--color-pizza-700);
+}
+
+.side-menu-squares p{
+    color: var(--color-woodsmoke-950);
+    font-weight: 400;
+
+    user-select: none;
+}
+
+.side-menu-squares.active p{
+    color: var(--color-pizza-700);
+    font-weight: bold;
+}
