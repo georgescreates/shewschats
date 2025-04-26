@@ -1,0 +1,6 @@
+<div class="side-menu-parts flex flex-col" id="side-menu-logo-part">
+            <div id="logo-container" class="flex flex-col gap-y-2 cursor-pointer w-[2.5rem] h-[2.5rem]">
+                <img src="../assets/images/shewschats_logo.png" alt="Shews Chats Logo" class="object-contain" title="Shews Chats">
+                <h2 class="uppercase font-funnel leading-[110%] text-center font-extrabold text-pizza-600 text-md w-full">Shews <span class="inline font-medium text-md text-center text-woodsmoke-950 w-full">Chats</span></h2>
+            </div>
+        </div>

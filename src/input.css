@@ -56,9 +56,9 @@
 
 
 
-.side-menu-squares{
-    height: 4.5rem;
-    width: 4.5rem;
+.side-menu-square{
+    height: 5rem;
+    width: 5rem;
 
     display: flex;
     flex-direction: column;
@@ -71,7 +71,7 @@
     position: relative;
 }
 
-.side-menu-squares::after{
+.side-menu-square::after{
     content: '';
 
     position: absolute;
@@ -92,30 +92,30 @@
     display: none;
 }
 
-.side-menu-squares.active{
+.side-menu-square.active{
     background-color: var(--color-pizza-50);
 }
 
-.side-menu-squares.active::after{
+.side-menu-square.active::after{
     display: block;
 }
 
-.side-menu-squares svg{
+.side-menu-square svg{
     color: var(--color-woodsmoke-950);
 }
 
-.side-menu-squares.active svg{
+.side-menu-square.active svg{
     color: var(--color-pizza-700);
 }
 
-.side-menu-squares p{
+.side-menu-square p{
     color: var(--color-woodsmoke-950);
     font-weight: 400;
 
     user-select: none;
 }
 
-.side-menu-squares.active p{
+.side-menu-square.active p{
     color: var(--color-pizza-700);
     font-weight: bold;
 }
