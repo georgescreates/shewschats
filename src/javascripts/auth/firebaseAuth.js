@@ -1,6 +1,5 @@
-import { onAuthStateChanged } from "firebase/auth";
 import { auth } from '../data/firebaseConfig.js';
-import { updateAuthUI } from './authState.js';
+export { auth };
 
 export function initAuth() {
     onAuthStateChanged(auth, (user) => {

@@ -1,16 +1,24 @@
-import { initializeApp } from "firebase/app";
-import { getAuth } from "firebase/auth";
-import { getFirestore } from "firebase/firestore";
-
 const firebaseConfig = {
-    apiKey: process.env.FIREBASE_API_KEY,
-    authDomain: process.env.FIREBASE_AUTH_DOMAIN,
-    projectId: process.env.FIREBASE_PROJECT_ID,
-    storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
-    messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
-    appId: process.env.FIREBASE_APP_ID
+    apiKey: "AIzaSyDw2sukKSfAqdBFagcBdUdKUs45j_Flx3M",
+    authDomain: "shewschats-v0.firebaseapp.com",
+    databaseURL: "https://shewschats-v0-default-rtdb.firebaseio.com",
+    projectId: "shewschats-v0",
+    storageBucket: "shewschats-v0.appspot.com",
+    messagingSenderId: "775277519878",
+    appId: "1:775277519878:web:19c1f7894f01b1061b0f87",
+    measurementId: "G-E35NWH8K07"
 };
 
-const app = initializeApp(firebaseConfig);
-export const auth = getAuth(app);
-export const db = getFirestore(app);
+// Initialize Firebase app if not already initialized
+if (!firebase.apps.length) {
+    firebase.initializeApp(firebaseConfig);
+}
+
+// Export services
+const auth = firebase.auth();
+const db = firebase.firestore();
+
+// Optional: if you need Storage
+const storage = firebase.storage();
+
+export { auth, db, storage };

@@ -39,7 +39,7 @@
     --color-pizza-800: #7a4719;
     --color-pizza-900: #683b1b;
     --color-pizza-950: #3c1f0c;
-    
+
     --color-cinnabar-50: #fef4f2;
     --color-cinnabar-100: #fde7e3;
     --color-cinnabar-200: #fdd2cb;
@@ -50,13 +50,13 @@
     --color-cinnabar-700: #b53420;
     --color-cinnabar-800: #962e1e;
     --color-cinnabar-900: #7d2c1f;
-    --color-cinnabar-950: #44130b;    
+    --color-cinnabar-950: #44130b;
 }
 
 
 
 
-.side-menu-square{
+.side-menu-square {
     height: 5rem;
     width: 5rem;
 
@@ -71,7 +71,7 @@
     position: relative;
 }
 
-.side-menu-square::after{
+.side-menu-square::after {
     content: '';
 
     position: absolute;
@@ -92,30 +92,39 @@
     display: none;
 }
 
-.side-menu-square.active{
+.side-menu-square.active {
     background-color: var(--color-pizza-50);
 }
 
-.side-menu-square.active::after{
+.side-menu-square.active::after {
     display: block;
 }
 
-.side-menu-square svg{
+.side-menu-square svg {
     color: var(--color-woodsmoke-950);
 }
 
-.side-menu-square.active svg{
+.side-menu-square.active svg {
     color: var(--color-pizza-700);
 }
 
-.side-menu-square p{
+.side-menu-square p {
     color: var(--color-woodsmoke-950);
     font-weight: 400;
 
     user-select: none;
 }
 
-.side-menu-square.active p{
+.side-menu-square.active p {
     color: var(--color-pizza-700);
     font-weight: bold;
+}
+
+/* Remember Me Checkbox */
+.custom-checkbox input:checked+.checkbox-box {
+    @apply bg-pizza-600 border-pizza-600;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 24 24'%3E%3Cpath fill='%23fff' d='m9.55 18l-5.7-5.7l1.425-1.425L9.55 15.15l9.175-9.175L20.15 7.4z' stroke-width='0.25' stroke='%23fff'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 70%;
 }

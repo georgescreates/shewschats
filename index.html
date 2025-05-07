@@ -11,42 +11,46 @@
 </head>
 
 <body class="flex flex-row font-funnel text-woodsmoke-950 text-[0.895rem] w-[100vw] h-[100vh]">
-    <div id="side-menu" class="w-auto h-auto flex flex-row items-center gap-x-[3rem] px-5 py-3 fixed z-200 bottom-[1rem] left-[50%] origin-center -translate-x-1/2">
+    <div id="side-menu"
+        class="w-auto h-auto flex flex-row items-center gap-x-[3rem] px-5 py-3 fixed z-200 bottom-0 left-[50%] origin-center -translate-x-1/2 rounded-md">
         <div class="side-menu-cta-container flex flex-row gap-x-1">
-            <div id="" class="side-menu-square" title="Chats">
+            <div id="" class="side-menu-square" data-target="chats-section" title="Chats">
                 <div class="relative h-auto w-auto">
                     <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24">
                         <path fill="currentColor"
                             d="m20.616 19.308l-3.078-3.077H8q-.635 0-1.086-.452t-.452-1.087v-.23H17.23q.666 0 1.14-.475q.475-.475.475-1.14V6h.231q.635 0 1.087.452t.452 1.087zm-16.231-6.19l1.655-1.656h9.19q.27 0 .443-.173t.173-.443v-6.23q0-.27-.173-.443T15.231 4H5q-.27 0-.442.173q-.173.173-.173.443zm-1 2.42V4.617q0-.667.474-1.141Q4.334 3 5 3h10.23q.667 0 1.142.475q.474.474.474 1.14v6.231q0 .667-.474 1.141q-.475.475-1.141.475H6.46zm1-4.692V4z"
                             stroke-width="0.25" stroke="currentColor" />
                     </svg>
-                    <div class="side-menu-square-bubble absolute -top-1.5 -right-1.5 bg-cinnabar-600 rounded-full min-w-[1rem] h-[1rem] flex items-center justify-center">
+                    <div
+                        class="side-menu-square-bubble hidden absolute -top-1.5 -right-1.5 bg-cinnabar-600 rounded-full min-w-[1rem] h-[1rem] flex items-center justify-center">
                         <span class="text-[0.75rem] text-cinnabar-50 px-[0.25rem]">2</span>
                     </div>
                 </div>
                 <p class="font-funnel text-sm text-pizza-600 text-center font-bold">Chats<span class=""></span></p>
             </div>
-            <div id="" class="side-menu-square" title="Calls">
+            <div id="" class="side-menu-square" data-target="calls-section" title="Calls">
                 <div class="relative h-auto w-auto">
                     <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24">
                         <path fill="currentColor"
                             d="M19.2 20q-2.702 0-5.418-1.244t-5.005-3.533q-2.27-2.289-3.523-5.021Q4 7.469 4 4.8V4h4.439l.848 4.083l-2.696 2.51q.684 1.186 1.417 2.167t1.527 1.769q.802.84 1.808 1.57t2.296 1.44l2.611-2.708l3.75.756V20zM6.121 9.654l2.092-1.92L7.635 5h-2.63q.03 1.144.309 2.305q.278 1.16.807 2.349m8.45 8.335q.923.463 2.09.723t2.339.277v-2.605l-2.388-.475zm0 0"
                             stroke-width="0.25" stroke="currentColor" />
                     </svg>
-                    <div class="side-menu-square-bubble hidden absolute -top-1.5 -right-1.5 bg-cinnabar-600 rounded-full min-w-[1rem] h-[1rem] items-center justify-center">
+                    <div
+                        class="side-menu-square-bubble hidden absolute -top-1.5 -right-1.5 bg-cinnabar-600 rounded-full min-w-[1rem] h-[1rem] items-center justify-center">
                         <span class="text-[0.75rem] text-cinnabar-50 px-[0.25rem]">2</span>
                     </div>
                 </div>
                 <p class="font-funnel text-sm text-woodsmoke-950">Calls<span class=""></span></p>
             </div>
-            <div id="" class="side-menu-square" title="Games">
+            <div id="" class="side-menu-square" data-target="games-section" title="Games">
                 <div class="relative h-auto w-auto">
                     <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24">
                         <path fill="currentColor"
                             d="m14.93 14.03l.862-3.13l-2.684-1.854l-.862 3.131zM4.617 19.288l-.422-.189q-.794-.344-1.069-1.141q-.275-.798.075-1.553l1.416-3.035zM9 20.769q-.825 0-1.412-.59Q7 19.589 7 18.764v-4.725l2.214 6.08q.074.195.144.347q.069.153.194.303zm4.362-.971q-.64.237-1.243-.036t-.838-.914L7.22 7.7q-.236-.64.046-1.24t.923-.835l6.41-2.346q.64-.237 1.24.046t.835.923l4.066 11.148q.236.64-.037 1.24q-.273.599-.914.835zm-.335-.971l6.396-2.327q.25-.096.356-.317q.106-.222.01-.472L15.756 4.615q-.096-.25-.317-.356q-.222-.105-.472-.009l-6.39 2.327q-.25.096-.356.317t-.01.471l4.028 11.096q.096.25.317.356t.471.01M14 11.538"
                             stroke-width="0.25" stroke="currentColor" />
                     </svg>
-                    <div class="side-menu-square-bubble hidden absolute -top-1.5 -right-1.5 bg-cinnabar-600 rounded-full min-w-[1rem] h-[1rem] items-center justify-center">
+                    <div
+                        class="side-menu-square-bubble hidden absolute -top-1.5 -right-1.5 bg-cinnabar-600 rounded-full min-w-[1rem] h-[1rem] items-center justify-center">
                         <span class="text-[0.75rem] text-cinnabar-50 px-[0.25rem]">2</span>
                     </div>
                 </div>
@@ -54,40 +58,43 @@
             </div>
         </div>
         <div class="side-menu-cta-container flex flex-row gap-x-1">
-            <div id="" class="side-menu-square" title="Notifications">
+            <div id="" class="side-menu-square" data-target="notifs-section" title="Notifications">
                 <div class="relative h-auto w-auto">
                     <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24">
                         <path fill="currentColor"
                             d="M5 18.77v-1h1.616V9.845q0-1.96 1.24-3.447T11 4.546V3h2v1.546q1.904.366 3.144 1.853t1.24 3.447v7.923H19v1zm6.997 2.615q-.668 0-1.14-.475t-.472-1.14h3.23q0 .67-.475 1.142q-.476.472-1.143.472M7.616 17.77h8.769V9.846q0-1.823-1.281-3.104T12 5.462t-3.104 1.28t-1.28 3.104z"
                             stroke-width="0.25" stroke="currentColor" />
                     </svg>
-                    <div class="side-menu-square-bubble hidden absolute -top-1.5 -right-1.5 bg-cinnabar-600 rounded-full min-w-[1rem] h-[1rem] items-center justify-center">
+                    <div
+                        class="side-menu-square-bubble hidden absolute -top-1.5 -right-1.5 bg-cinnabar-600 rounded-full min-w-[1rem] h-[1rem] items-center justify-center">
                         <span class="text-[0.75rem] text-cinnabar-50 px-[0.25rem]">2</span>
                     </div>
                 </div>
                 <p class="font-funnel text-sm text-woodsmoke-950">Notif.<span class=""></span></p>
             </div>
-            <div class="side-menu-square" title="Earnings">
+            <div class="side-menu-square" data-target="earnings-section" title="Earnings">
                 <div class="relative h-auto w-auto">
                     <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24">
                         <path fill="currentColor"
                             d="M8.63 20q-1.928 0-3.279-1.351T4 15.369q0-.815.277-1.58t.8-1.395l3.512-4.217L6.509 4h10.982l-2.08 4.177l3.512 4.217q.523.629.8 1.394q.277.766.277 1.581q0 1.929-1.354 3.28T15.37 20zM12 15.48q-.671 0-1.143-.471q-.472-.472-.472-1.143q0-.672.472-1.144T12 12.25t1.143.472t.472 1.144t-.472 1.143T12 15.48M9.51 7.75h5L15.875 5h-7.75zM8.63 19h6.74q1.52 0 2.575-1.064T19 15.369q0-.638-.213-1.24t-.625-1.088l-3.58-4.291h-5.14l-3.584 4.285q-.414.488-.636 1.092T5 15.369q0 1.502 1.065 2.567Q7.129 19 8.63 19"
                             stroke-width="0.25" stroke="currentColor" />
                     </svg>
-                    <div class="side-menu-square-bubble hidden absolute -top-1.5 -right-1.5 bg-cinnabar-600 rounded-full min-w-[1rem] h-[1rem] items-center justify-center">
+                    <div
+                        class="side-menu-square-bubble hidden absolute -top-1.5 -right-1.5 bg-cinnabar-600 rounded-full min-w-[1rem] h-[1rem] items-center justify-center">
                         <span class="text-[0.75rem] text-cinnabar-50 px-[0.25rem]">2</span>
                     </div>
                 </div>
                 <p class="font-funnel text-sm text-woodsmoke-950">Earns.</p>
             </div>
-            <div class="side-menu-square" title="Statistics">
+            <div class="side-menu-square" data-target="stats-section" title="Statistics">
                 <div class="relative h-auto w-auto">
                     <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24">
                         <path fill="currentColor"
                             d="M3.354 16.894q-.165-.165-.153-.356t.153-.332l4.813-4.87q.46-.478 1.137-.478t1.156.478l2.42 2.427q.174.173.424.173t.442-.173l5.585-5.515H16.5q-.213 0-.357-.143T16 7.748t.143-.357t.357-.143h3.692q.349 0 .578.23q.23.23.23.578v3.692q0 .214-.143.357t-.357.143t-.357-.133t-.143-.348V8.956l-5.56 5.56q-.46.459-1.136.459q-.677 0-1.137-.46l-2.42-2.42q-.174-.174-.443-.174t-.443.173l-4.8 4.8q-.159.16-.353.16t-.354-.16"
                             stroke-width="0.25" stroke="currentColor" />
                     </svg>
-                    <div class="side-menu-square-bubble hidden absolute -top-1.5 -right-1.5 bg-cinnabar-600 rounded-full min-w-[1rem] h-[1rem] items-center justify-center">
+                    <div
+                        class="side-menu-square-bubble hidden absolute -top-1.5 -right-1.5 bg-cinnabar-600 rounded-full min-w-[1rem] h-[1rem] items-center justify-center">
                         <span class="text-[0.75rem] text-cinnabar-50 px-[0.25rem]">2</span>
                     </div>
                 </div>
@@ -95,14 +102,15 @@
             </div>
         </div>
         <div class="side-menu-cta-container flex flex-row gap-x-1">
-            <div id="" class="side-menu-square active" title="Account">
+            <div id="" class="side-menu-square" data-target="account-section" title="Account">
                 <div class="relative h-auto w-auto">
                     <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24">
                         <path fill="currentColor"
                             d="M6.196 17.485q1.275-.918 2.706-1.451Q10.332 15.5 12 15.5t3.098.534t2.706 1.45q.99-1.025 1.593-2.42Q20 13.667 20 12q0-3.325-2.337-5.663T12 4T6.337 6.338T4 12q0 1.667.603 3.064q.603 1.396 1.593 2.42M12 12.5q-1.263 0-2.132-.868T9 9.5t.868-2.132T12 6.5t2.132.868T15 9.5t-.868 2.132T12 12.5m0 8.5q-1.883 0-3.525-.701t-2.858-1.916t-1.916-2.858T3 12t.701-3.525t1.916-2.858q1.216-1.215 2.858-1.916T12 3t3.525.701t2.858 1.916t1.916 2.858T21 12t-.701 3.525t-1.916 2.858q-1.216 1.215-2.858 1.916T12 21"
                             stroke-width="0.25" stroke="currentColor" />
                     </svg>
-                    <div class="side-menu-square-bubble hidden absolute -top-1.5 -right-1.5 bg-cinnabar-600 rounded-full min-w-[1rem] h-[1rem] items-center justify-center">
+                    <div
+                        class="side-menu-square-bubble hidden absolute -top-1.5 -right-1.5 bg-cinnabar-600 rounded-full min-w-[1rem] h-[1rem] items-center justify-center">
                         <span class="text-[0.75rem] text-cinnabar-50 px-[0.25rem]">2</span>
                     </div>
                 </div>
@@ -118,7 +126,7 @@
 
     <div id="main-section-container" class="w-full h-full relative overflow-x-hidden overflow-y-hidden">
         <section class="w-full h-full max-w-full max-h-full absolute top-0 left-0 z-100" id="checkup-section">
-            <div id="loading-window" class="hidden flex-col items-center justify-center w-full h-full">
+            <div id="loading-window" class="hidden flex-col items-center justify-center w-full h-full bg-white">
                 <div id="loading-window-svg-container" class="text-woodsmoke-300">
                     <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24">
                         <circle cx="4" cy="12" r="3" fill="currentColor" stroke-width="0.25" stroke="currentColor">
@@ -140,80 +148,109 @@
             </div>
 
             <div id="login-window" class="hidden flex-col items-center justify-center w-full h-full">
-                <form action="" id="login-form" class="min-w-[400px] max-w-[625px] h-auto flex flex-col gap-y-6 py-5">
+                <form action="" id="login-form" class="w-[400px] min-w-[400px] h-auto flex flex-col gap-y-6 py-5">
                     <div class="login-form-header">
                         <h3 class="text-3xl text-woodsmoke-950 font-extrabold">Log Into Your Account</h3>
                         <p class="text-woodsmoke-500 italic">Welcome back! Log in with your credentials.</p>
                     </div>
                     <div class="flex flex-row gap-x-2">
                         <h6 class="font-medium">Don't have an account? </h6>
-                        <button class="text-pizza-600 font-medium cursor-pointer">Sign Up</button>
+                        <button type="button" class="text-pizza-600 font-medium cursor-pointer" id="to-signup-form">Sign
+                            Up</button>
                     </div>
-                    <div class="w-ful h-auto flex flex-col gap-y-1" id="login-form-id-part">
+                    <div class="w-full h-auto flex flex-col gap-y-1" id="login-form-id-part">
                         <h5 class="text-lg text-woodsmoke-950 font-bold">Shew ID :</h5>
                         <div class="flex flex-row items-center gap-x-2 w-full h-12 border border-mercury-200 rounded-md px-3">
-                            <input type="text" maxlength="20" class="h-full flex-1 outline-0" placeholder="type or paste your SHEW ID in here ...">
-                            <button class="py-3 text-woodsmoke-500 hover:text-woodsmoke-950 cursor-pointer" title="click to paste your SHEW ID in here">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="">
-                                    <path fill="currentColor" d="M5.616 20q-.667 0-1.141-.475T4 18.386V5.615q0-.666.475-1.14T5.615 4h4.637q.14-.586.623-.985q.483-.4 1.125-.4q.654 0 1.134.4q.48.398.62.985h4.63q.667 0 1.142.475T20 5.615v12.77q0 .666-.475 1.14t-1.14.475zm0-1h12.769q.23 0 .423-.192t.192-.424V5.616q0-.231-.192-.424T18.384 5H16v1.423q0 .343-.23.576t-.57.232H8.8q-.34 0-.57-.232T8 6.423V5H5.616q-.231 0-.424.192T5 5.616v12.769q0 .23.192.423t.423.192m6.388-13.77q.345 0 .575-.232q.23-.233.23-.578t-.233-.575t-.578-.23t-.575.234t-.23.578t.234.574t.577.23" stroke-width="0.25" stroke="currentColor" />
+                            <input type="text" maxlength="11" class="h-full flex-1 outline-0 uppercase tracking-wider placeholder:lowercase placeholder:tracking-normal" id="login-shew-id-input" autocomplete="off" placeholder="type or paste your SHEW ID in here ...">
+                            <button class="py-3 text-woodsmoke-500 hover:text-woodsmoke-950 cursor-pointer"
+                                title="click to paste your SHEW ID in here">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    class="">
+                                    <path fill="currentColor"
+                                        d="M5.616 20q-.667 0-1.141-.475T4 18.386V5.615q0-.666.475-1.14T5.615 4h4.637q.14-.586.623-.985q.483-.4 1.125-.4q.654 0 1.134.4q.48.398.62.985h4.63q.667 0 1.142.475T20 5.615v12.77q0 .666-.475 1.14t-1.14.475zm0-1h12.769q.23 0 .423-.192t.192-.424V5.616q0-.231-.192-.424T18.384 5H16v1.423q0 .343-.23.576t-.57.232H8.8q-.34 0-.57-.232T8 6.423V5H5.616q-.231 0-.424.192T5 5.616v12.769q0 .23.192.423t.423.192m6.388-13.77q.345 0 .575-.232q.23-.233.23-.578t-.233-.575t-.578-.23t-.575.234t-.23.578t.234.574t.577.23"
+                                        stroke-width="0.25" stroke="currentColor" />
                                 </svg>
                             </button>
                         </div>
                         <div class="flex justify-end items-center w-full">
-                            <a href="#" class="underline text-pizza-600 hover:text-pizza-700 text-sm font-medium">Log In as a STEM instead</a>
+                            <a href="#" class="underline text-pizza-600 hover:text-pizza-700 text-sm font-medium">Log In
+                                as a STEM instead</a>
                         </div>
-                        <div class="form-part-alert-container w-full h-auto hidden flex-row items-center gap-x-2">
-                            <div class="alert-icons-container flex flex-row">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="hidden">
-                                    <path fill="currentColor" d="m9.55 15.88l8.802-8.801q.146-.146.344-.156t.363.156t.166.357t-.165.356l-8.944 8.95q-.243.243-.566.243t-.566-.243l-4.05-4.05q-.146-.146-.152-.347t.158-.366t.357-.165t.357.165z" stroke-width="0.5" stroke="currentColor" />
+                        <div class="form-part-alert-container w-full h-auto hidden flex-row items-start gap-x-2">
+                            <div class="alert-icons-container flex flex-row w-[20px]">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                    class="hidden">
+                                    <path fill="currentColor"
+                                        d="m9.55 15.88l8.802-8.801q.146-.146.344-.156t.363.156t.166.357t-.165.356l-8.944 8.95q-.243.243-.566.243t-.566-.243l-4.05-4.05q-.146-.146-.152-.347t.158-.366t.357-.165t.357.165z"
+                                        stroke-width="0.5" stroke="currentColor" />
                                 </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="text-cinnabar-600">
-                                    <path fill="currentColor" d="M4.126 20q-.234 0-.414-.111t-.28-.293q-.108-.179-.12-.387q-.01-.209.118-.421L11.3 5.212q.128-.212.308-.308T12 4.808t.391.096t.308.308l7.871 13.576q.128.212.117.42q-.01.21-.12.388q-.1.182-.28.293t-.413.111zm.324-1h15.1L12 6zM12 17.616q.262 0 .439-.177t.176-.439t-.177-.438t-.438-.178t-.438.177t-.177.439t.177.439t.438.177m0-2.231q.214 0 .357-.144t.143-.356v-4q0-.213-.144-.357t-.357-.143t-.356.143t-.143.357v4q0 .212.144.356t.357.144M12 12.5" stroke-width="0.5" stroke="currentColor" />
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                    class="text-cinnabar-600">
+                                    <path fill="currentColor"
+                                        d="M4.126 20q-.234 0-.414-.111t-.28-.293q-.108-.179-.12-.387q-.01-.209.118-.421L11.3 5.212q.128-.212.308-.308T12 4.808t.391.096t.308.308l7.871 13.576q.128.212.117.42q-.01.21-.12.388q-.1.182-.28.293t-.413.111zm.324-1h15.1L12 6zM12 17.616q.262 0 .439-.177t.176-.439t-.177-.438t-.438-.178t-.438.177t-.177.439t.177.439t.438.177m0-2.231q.214 0 .357-.144t.143-.356v-4q0-.213-.144-.357t-.357-.143t-.356.143t-.143.357v4q0 .212.144.356t.357.144M12 12.5"
+                                        stroke-width="0.5" stroke="currentColor" />
                                 </svg>
                             </div>
-                            <span id="" class="form-part-alert-text text-cinnabar-600 font-medium"></span>
+                            <span id="login-shew-id-alert" class="form-part-alert-text w-[calc(100%-20px)] text-cinnabar-600 font-medium"></span>
                         </div>
                     </div>
-                    <div class="w-ful h-auto flex flex-col gap-y-2" id="login-form-password-part">
+                    <div class="w-full h-auto flex flex-col gap-y-2" id="login-form-password-part">
                         <h5 class="text-lg text-woodsmoke-950 font-bold">Password :</h5>
-                        <div class="flex flex-row items-center gap-x-2 w-full h-12 border border-mercury-200 rounded-md px-3">
-                            <input type="password" maxlength="20" class="h-full flex-1 outline-0" placeholder="enter your password here ...">
-                            <button class="py-3 text-woodsmoke-500 hover:text-woodsmoke-950 cursor-pointer" title="Toggle password visibility">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="">
-                                    <path fill="currentColor" d="M12.005 15.154q1.524 0 2.586-1.067t1.063-2.591t-1.067-2.587t-2.591-1.063t-2.587 1.067t-1.063 2.592t1.067 2.586t2.592 1.063M12 14.2q-1.125 0-1.912-.787T9.3 11.5t.788-1.912T12 8.8t1.913.788t.787 1.912t-.787 1.913T12 14.2m.003 3.8q-3.25 0-5.922-1.768T2.077 11.5q1.33-2.964 4.001-4.732T11.998 5t5.921 1.768t4.004 4.732q-1.33 2.964-4.001 4.732T12.002 18M12 17q2.825 0 5.188-1.487T20.8 11.5q-1.25-2.525-3.613-4.012T12 6T6.813 7.488T3.2 11.5q1.25 2.525 3.613 4.013T12 17" stroke-width="0.25" stroke="currentColor" />
+                        <div
+                            class="flex flex-row items-center gap-x-2 w-full h-12 border border-mercury-200 rounded-md px-3">
+                            <input type="password" maxlength="20" class="h-full flex-1 outline-0" id="login-shew-password-input" required
+                                placeholder="enter your password here ...">
+                            <button type="button" class="py-3 text-woodsmoke-500 hover:text-woodsmoke-950 cursor-pointer" id="toggle-login-password-visibility"
+                                title="Toggle password visibility">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    class="">
+                                    <path fill="currentColor"
+                                        d="M12.005 15.154q1.524 0 2.586-1.067t1.063-2.591t-1.067-2.587t-2.591-1.063t-2.587 1.067t-1.063 2.592t1.067 2.586t2.592 1.063M12 14.2q-1.125 0-1.912-.787T9.3 11.5t.788-1.912T12 8.8t1.913.788t.787 1.912t-.787 1.913T12 14.2m.003 3.8q-3.25 0-5.922-1.768T2.077 11.5q1.33-2.964 4.001-4.732T11.998 5t5.921 1.768t4.004 4.732q-1.33 2.964-4.001 4.732T12.002 18M12 17q2.825 0 5.188-1.487T20.8 11.5q-1.25-2.525-3.613-4.012T12 6T6.813 7.488T3.2 11.5q1.25 2.525 3.613 4.013T12 17"
+                                        stroke-width="0.25" stroke="currentColor" />
                                 </svg>
                             </button>
                         </div>
                         <div class="form-part-alert-container w-full h-auto hidden flex-row items-center gap-x-2">
                             <div class="alert-icons-container flex flex-row">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="hidden">
-                                    <path fill="currentColor" d="m9.55 15.88l8.802-8.801q.146-.146.344-.156t.363.156t.166.357t-.165.356l-8.944 8.95q-.243.243-.566.243t-.566-.243l-4.05-4.05q-.146-.146-.152-.347t.158-.366t.357-.165t.357.165z" stroke-width="0.5" stroke="currentColor" />
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                    class="hidden">
+                                    <path fill="currentColor"
+                                        d="m9.55 15.88l8.802-8.801q.146-.146.344-.156t.363.156t.166.357t-.165.356l-8.944 8.95q-.243.243-.566.243t-.566-.243l-4.05-4.05q-.146-.146-.152-.347t.158-.366t.357-.165t.357.165z"
+                                        stroke-width="0.5" stroke="currentColor" />
                                 </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="text-cinnabar-600">
-                                    <path fill="currentColor" d="M4.126 20q-.234 0-.414-.111t-.28-.293q-.108-.179-.12-.387q-.01-.209.118-.421L11.3 5.212q.128-.212.308-.308T12 4.808t.391.096t.308.308l7.871 13.576q.128.212.117.42q-.01.21-.12.388q-.1.182-.28.293t-.413.111zm.324-1h15.1L12 6zM12 17.616q.262 0 .439-.177t.176-.439t-.177-.438t-.438-.178t-.438.177t-.177.439t.177.439t.438.177m0-2.231q.214 0 .357-.144t.143-.356v-4q0-.213-.144-.357t-.357-.143t-.356.143t-.143.357v4q0 .212.144.356t.357.144M12 12.5" stroke-width="0.5" stroke="currentColor" />
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                    class="text-cinnabar-600">
+                                    <path fill="currentColor"
+                                        d="M4.126 20q-.234 0-.414-.111t-.28-.293q-.108-.179-.12-.387q-.01-.209.118-.421L11.3 5.212q.128-.212.308-.308T12 4.808t.391.096t.308.308l7.871 13.576q.128.212.117.42q-.01.21-.12.388q-.1.182-.28.293t-.413.111zm.324-1h15.1L12 6zM12 17.616q.262 0 .439-.177t.176-.439t-.177-.438t-.438-.178t-.438.177t-.177.439t.177.439t.438.177m0-2.231q.214 0 .357-.144t.143-.356v-4q0-.213-.144-.357t-.357-.143t-.356.143t-.143.357v4q0 .212.144.356t.357.144M12 12.5"
+                                        stroke-width="0.5" stroke="currentColor" />
                                 </svg>
                             </div>
-                            <span id="" class="form-part-alert-text text-cinnabar-600 font-medium"></span>
+                            <span id="login-shew-password-alert" class="form-part-alert-text text-cinnabar-600 font-medium"></span>
                         </div>
                         <div class="flex justify-between items-center w-full">
                             <label class="custom-checkbox flex items-center gap-1 cursor-pointer">
                                 <div class="relative">
                                     <input type="checkbox" class="sr-only">
-                                    <div class="checkbox-box w-5 h-5 border border-mercury-300 bg-mercury-100 rounded-sm transition-colors"></div>
+                                    <div
+                                        class="checkbox-box w-5 h-5 border border-mercury-300 bg-mercury-100 rounded-sm transition-colors">
+                                    </div>
                                 </div>
                                 <span class="text-sm">Remember Me</span>
                             </label>
-                            <a href="#" class="underline text-pizza-600 hover:text-pizza-700 text-sm font-medium">Forgot password?</a>
+                            <a href="#" class="underline text-pizza-600 hover:text-pizza-700 text-sm font-medium">Forgot
+                                password?</a>
                         </div>
                     </div>
                     <div id="login-form-submit-part" class="flex flex-col gap-y-1 items-center w-full h-auto">
-                        <button class="w-full h-auto py-3 bg-pizza-200 text-pizza-950 rounded-md font-bold cursor-not-allowed opacity-50">
+                        <button type="submit" disabled id="login-submit-form-btn"
+                            class="flex items-center justify-center w-full h-auto py-3 bg-pizza-200 text-pizza-950 rounded-md font-bold cursor-not-allowed opacity-50">
                             Log In
                         </button>
                         <small class="block max-w-[400px] w-full text-xs">
-                            By logging in, you agree to the 
-                            <a href="" class="text-pizza-600 underline hover:text-pizza-700">Terms of Use</a> and 
-                            <a href="" class="text-pizza-600 underline hover:text-pizza-700">Privacy Policy</a> including 
+                            By logging in, you agree to the
+                            <a href="" class="text-pizza-600 underline hover:text-pizza-700">Terms of Use</a> and
+                            <a href="" class="text-pizza-600 underline hover:text-pizza-700">Privacy Policy</a>
+                            including
                             <a href="" class="text-pizza-600 underline hover:text-pizza-700">Cookie's Usage</a>
                         </small>
                     </div>
@@ -223,31 +260,58 @@
                             <p class="text-mercury-300 text-sm">or</p>
                             <span class="thin-line flex-1 h-[0.0625rem] bg-mercury-300"></span>
                         </div>
-                        <button class="w-full h-auto py-3 bg-mercury-50 hover:bg-mercury-100 text-woodsmoke-950 rounded-md font-bold cursor-pointer flex flex-row gap-x-2 items-center justify-center">
+                        <button
+                            class="w-full h-auto py-3 bg-mercury-50 hover:bg-mercury-100 text-woodsmoke-950 rounded-md font-bold cursor-pointer flex flex-row gap-x-2 items-center justify-center">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 48 48">
-                                <path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"></path>
-                                <path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"></path>
-                                <path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"></path>
-                                <path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"></path>
+                                <path fill="#FFC107"
+                                    d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z">
+                                </path>
+                                <path fill="#FF3D00"
+                                    d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z">
+                                </path>
+                                <path fill="#4CAF50"
+                                    d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z">
+                                </path>
+                                <path fill="#1976D2"
+                                    d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z">
+                                </path>
                             </svg>
                             Log In with Google
                         </button>
                     </div>
-                    <div class="form-part-alert-container w-full h-auto hidden flex-row items-center gap-x-2" id="login-form-general-alert-container">
+                    <div class="form-part-alert-container w-full h-auto hidden flex-row items-center gap-x-2"
+                        id="login-form-general-alert-container">
                         <div class="alert-icons-container flex flex-row">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="hidden">
-                                <path fill="currentColor" d="m9.55 15.88l8.802-8.801q.146-.146.344-.156t.363.156t.166.357t-.165.356l-8.944 8.95q-.243.243-.566.243t-.566-.243l-4.05-4.05q-.146-.146-.152-.347t.158-.366t.357-.165t.357.165z" stroke-width="0.5" stroke="currentColor" />
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                class="hidden">
+                                <path fill="currentColor"
+                                    d="m9.55 15.88l8.802-8.801q.146-.146.344-.156t.363.156t.166.357t-.165.356l-8.944 8.95q-.243.243-.566.243t-.566-.243l-4.05-4.05q-.146-.146-.152-.347t.158-.366t.357-.165t.357.165z"
+                                    stroke-width="0.5" stroke="currentColor" />
                             </svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="text-cinnabar-600">
-                                <path fill="currentColor" d="M4.126 20q-.234 0-.414-.111t-.28-.293q-.108-.179-.12-.387q-.01-.209.118-.421L11.3 5.212q.128-.212.308-.308T12 4.808t.391.096t.308.308l7.871 13.576q.128.212.117.42q-.01.21-.12.388q-.1.182-.28.293t-.413.111zm.324-1h15.1L12 6zM12 17.616q.262 0 .439-.177t.176-.439t-.177-.438t-.438-.178t-.438.177t-.177.439t.177.439t.438.177m0-2.231q.214 0 .357-.144t.143-.356v-4q0-.213-.144-.357t-.357-.143t-.356.143t-.143.357v4q0 .212.144.356t.357.144M12 12.5" stroke-width="0.5" stroke="currentColor" />
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                class="text-cinnabar-600">
+                                <path fill="currentColor"
+                                    d="M4.126 20q-.234 0-.414-.111t-.28-.293q-.108-.179-.12-.387q-.01-.209.118-.421L11.3 5.212q.128-.212.308-.308T12 4.808t.391.096t.308.308l7.871 13.576q.128.212.117.42q-.01.21-.12.388q-.1.182-.28.293t-.413.111zm.324-1h15.1L12 6zM12 17.616q.262 0 .439-.177t.176-.439t-.177-.438t-.438-.178t-.438.177t-.177.439t.177.439t.438.177m0-2.231q.214 0 .357-.144t.143-.356v-4q0-.213-.144-.357t-.357-.143t-.356.143t-.143.357v4q0 .212.144.356t.357.144M12 12.5"
+                                    stroke-width="0.5" stroke="currentColor" />
                             </svg>
                         </div>
                         <span id="" class="form-part-alert-text text-cinnabar-600 font-medium">s</span>
                     </div>
+                    <!-- <div id="login-to-signup-redirect" class="chip hidden flex-row gap-x-2 fixed top-[3rem] left-[50%] -translate-x-1/2 px-4 py-2 rounded shadow-md transition-all duration-300 bg-cinnabar-200 text-cinnabar-800">
+                        <h6 class="flex flex-row gap-x-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                class="">
+                                <path fill="currentColor"
+                                    d="M4.126 20q-.234 0-.414-.111t-.28-.293q-.108-.179-.12-.387q-.01-.209.118-.421L11.3 5.212q.128-.212.308-.308T12 4.808t.391.096t.308.308l7.871 13.576q.128.212.117.42q-.01.21-.12.388q-.1.182-.28.293t-.413.111zm.324-1h15.1L12 6zM12 17.616q.262 0 .439-.177t.176-.439t-.177-.438t-.438-.178t-.438.177t-.177.439t.177.439t.438.177m0-2.231q.214 0 .357-.144t.143-.356v-4q0-.213-.144-.357t-.357-.143t-.356.143t-.143.357v4q0 .212.144.356t.357.144M12 12.5"
+                                    stroke-width="0.5" stroke="currentColor" />
+                            </svg>
+                            <span>No account was found with the provided SHEW ID. Redirecting to signing up in <span id="signup-countdown" class="font-bold">10s</span>.</span></h6>
+                        <button type="button" id="abort-signup-redirect" class="font-medium">Abort</button>
+                    </div> -->
                 </form>
             </div>
 
-            <div id="signup-window" class="flex flex-col items-center justify-center w-full h-full">
+            <div id="signup-window" class="hidden flex-col items-center justify-center w-full h-full">
                 <form action="" id="signup-form" class="min-w-[400px] max-w-[625px] h-auto flex flex-col gap-y-6 py-5">
                     <div class="signup-form-header">
                         <h3 class="text-3xl text-woodsmoke-950 font-extrabold">Create an Account</h3>
@@ -255,16 +319,19 @@
                     </div>
                     <div class="flex flex-row gap-x-2">
                         <h6 class="font-medium">Already have an account? </h6>
-                        <button class="text-pizza-600 font-medium cursor-pointer">Log In</button>
+                        <button type="button" class="text-pizza-600 font-medium cursor-pointer" id="to-login-form">Log
+                            In</button>
                     </div>
                     <div id="signup-form-about-you-part" class="w-full h-auto flex flex-col gap-y-2">
                         <div class="flex flex-col w-full h-auto">
                             <h5 class="text-lg text-woodsmoke-950 font-bold">About You :</h5>
-                            <span class="form-part-label-subtitle text-woodsmoke-500 italic">Provide your name and date of birth. Can't be changed later.</span>
+                            <span class="form-part-label-subtitle text-woodsmoke-500 italic">Provide your name and date
+                                of birth. Can't be changed later.</span>
                         </div>
                         <div class="flex flex-row gap-x-2 w-full h-auto shew-signup-input-container">
                             <div class="flex-1 w-auto h-12 border border-mercury-200 rounded-md px-3">
-                                <input type="text" class="w-full h-full flex-1 outline-0" placeholder="enter your first name here ..." id="signup-firstname-input">
+                                <input type="text" class="w-full h-full flex-1 outline-0"
+                                    placeholder="enter your first name here ..." id="signup-firstname-input">
                             </div>
                             <div class="w-[40%] h-12 border border-mercury-200 rounded-md px-3">
                                 <input type="date" class="h-full flex-1 outline-0" id="signup-dob-input">
@@ -272,11 +339,17 @@
                         </div>
                         <div class="form-part-alert-container w-full h-auto hidden flex-row items-center gap-x-2">
                             <div class="alert-icons-container flex flex-row">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="hidden">
-                                    <path fill="currentColor" d="m9.55 15.88l8.802-8.801q.146-.146.344-.156t.363.156t.166.357t-.165.356l-8.944 8.95q-.243.243-.566.243t-.566-.243l-4.05-4.05q-.146-.146-.152-.347t.158-.366t.357-.165t.357.165z" stroke-width="0.5" stroke="currentColor" />
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                    class="hidden">
+                                    <path fill="currentColor"
+                                        d="m9.55 15.88l8.802-8.801q.146-.146.344-.156t.363.156t.166.357t-.165.356l-8.944 8.95q-.243.243-.566.243t-.566-.243l-4.05-4.05q-.146-.146-.152-.347t.158-.366t.357-.165t.357.165z"
+                                        stroke-width="0.5" stroke="currentColor" />
                                 </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="text-cinnabar-600">
-                                    <path fill="currentColor" d="M4.126 20q-.234 0-.414-.111t-.28-.293q-.108-.179-.12-.387q-.01-.209.118-.421L11.3 5.212q.128-.212.308-.308T12 4.808t.391.096t.308.308l7.871 13.576q.128.212.117.42q-.01.21-.12.388q-.1.182-.28.293t-.413.111zm.324-1h15.1L12 6zM12 17.616q.262 0 .439-.177t.176-.439t-.177-.438t-.438-.178t-.438.177t-.177.439t.177.439t.438.177m0-2.231q.214 0 .357-.144t.143-.356v-4q0-.213-.144-.357t-.357-.143t-.356.143t-.143.357v4q0 .212.144.356t.357.144M12 12.5" stroke-width="0.5" stroke="currentColor" />
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                    class="text-cinnabar-600">
+                                    <path fill="currentColor"
+                                        d="M4.126 20q-.234 0-.414-.111t-.28-.293q-.108-.179-.12-.387q-.01-.209.118-.421L11.3 5.212q.128-.212.308-.308T12 4.808t.391.096t.308.308l7.871 13.576q.128.212.117.42q-.01.21-.12.388q-.1.182-.28.293t-.413.111zm.324-1h15.1L12 6zM12 17.616q.262 0 .439-.177t.176-.439t-.177-.438t-.438-.178t-.438.177t-.177.439t.177.439t.438.177m0-2.231q.214 0 .357-.144t.143-.356v-4q0-.213-.144-.357t-.357-.143t-.356.143t-.143.357v4q0 .212.144.356t.357.144M12 12.5"
+                                        stroke-width="0.5" stroke="currentColor" />
                                 </svg>
                             </div>
                             <span id="" class="form-part-alert-text text-cinnabar-600 font-medium"></span>
@@ -285,18 +358,27 @@
                     <div id="signup-form-username-part" class="w-full h-auto flex flex-col gap-y-2">
                         <div class="flex flex-col w-full h-auto">
                             <h5 class="text-lg text-woodsmoke-950 font-bold">Choose a username :</h5>
-                            <span class="form-part-label-subtitle text-woodsmoke-500 italic">This is how you'll be recognized. Later editable</span>
+                            <span class="form-part-label-subtitle text-woodsmoke-500 italic">This is how you'll be
+                                recognized. Later editable</span>
                         </div>
-                        <div class="flex flex-row items-center gap-x-2 w-full h-12 border border-mercury-200 rounded-md px-3 signup-input-container">
-                            <input type="text" maxlength="15" class="h-full flex-1 outline-0" placeholder="enter your username here ..." id="signup-username-input">
+                        <div
+                            class="flex flex-row items-center gap-x-2 w-full h-12 border border-mercury-200 rounded-md px-3 signup-input-container">
+                            <input type="text" maxlength="15" class="h-full flex-1 outline-0"
+                                placeholder="enter your username here ..." id="signup-username-input">
                         </div>
                         <div class="form-part-alert-container w-full h-auto hidden flex-row items-center gap-x-2">
                             <div class="alert-icons-container flex flex-row">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="hidden">
-                                    <path fill="currentColor" d="m9.55 15.88l8.802-8.801q.146-.146.344-.156t.363.156t.166.357t-.165.356l-8.944 8.95q-.243.243-.566.243t-.566-.243l-4.05-4.05q-.146-.146-.152-.347t.158-.366t.357-.165t.357.165z" stroke-width="0.5" stroke="currentColor" />
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                    class="hidden">
+                                    <path fill="currentColor"
+                                        d="m9.55 15.88l8.802-8.801q.146-.146.344-.156t.363.156t.166.357t-.165.356l-8.944 8.95q-.243.243-.566.243t-.566-.243l-4.05-4.05q-.146-.146-.152-.347t.158-.366t.357-.165t.357.165z"
+                                        stroke-width="0.5" stroke="currentColor" />
                                 </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="text-cinnabar-600">
-                                    <path fill="currentColor" d="M4.126 20q-.234 0-.414-.111t-.28-.293q-.108-.179-.12-.387q-.01-.209.118-.421L11.3 5.212q.128-.212.308-.308T12 4.808t.391.096t.308.308l7.871 13.576q.128.212.117.42q-.01.21-.12.388q-.1.182-.28.293t-.413.111zm.324-1h15.1L12 6zM12 17.616q.262 0 .439-.177t.176-.439t-.177-.438t-.438-.178t-.438.177t-.177.439t.177.439t.438.177m0-2.231q.214 0 .357-.144t.143-.356v-4q0-.213-.144-.357t-.357-.143t-.356.143t-.143.357v4q0 .212.144.356t.357.144M12 12.5" stroke-width="0.5" stroke="currentColor" />
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                    class="text-cinnabar-600">
+                                    <path fill="currentColor"
+                                        d="M4.126 20q-.234 0-.414-.111t-.28-.293q-.108-.179-.12-.387q-.01-.209.118-.421L11.3 5.212q.128-.212.308-.308T12 4.808t.391.096t.308.308l7.871 13.576q.128.212.117.42q-.01.21-.12.388q-.1.182-.28.293t-.413.111zm.324-1h15.1L12 6zM12 17.616q.262 0 .439-.177t.176-.439t-.177-.438t-.438-.178t-.438.177t-.177.439t.177.439t.438.177m0-2.231q.214 0 .357-.144t.143-.356v-4q0-.213-.144-.357t-.357-.143t-.356.143t-.143.357v4q0 .212.144.356t.357.144M12 12.5"
+                                        stroke-width="0.5" stroke="currentColor" />
                                 </svg>
                             </div>
                             <span id="" class="form-part-alert-text text-cinnabar-600 font-medium"></span>
@@ -305,18 +387,27 @@
                     <div id="shew-signup-form-email-part" class="w-ful h-auto flex flex-col gap-y-2">
                         <div class="flex flex-col w-full h-auto">
                             <h5 class="text-lg text-woodsmoke-950 font-bold">Attach an email :</h5>
-                            <span class="form-part-label-subtitle text-woodsmoke-500 italic">We'll send a verification link to this email</span>
+                            <span class="form-part-label-subtitle text-woodsmoke-500 italic">We'll send a verification
+                                link to this email</span>
                         </div>
-                        <div class="flex flex-row items-center gap-x-2 w-full h-12 border border-mercury-200 rounded-md px-3 signup-input-container">
-                            <input type="email" class="w-full h-full flex-1 outline-0" placeholder="enter your email here ..." id="signup-email-input">
+                        <div
+                            class="flex flex-row items-center gap-x-2 w-full h-12 border border-mercury-200 rounded-md px-3 signup-input-container">
+                            <input type="email" class="w-full h-full flex-1 outline-0"
+                                placeholder="enter your email here ..." id="signup-email-input">
                         </div>
                         <div class="form-part-alert-container w-full h-auto hidden flex-row items-center gap-x-2">
                             <div class="alert-icons-container flex flex-row">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="hidden">
-                                    <path fill="currentColor" d="m9.55 15.88l8.802-8.801q.146-.146.344-.156t.363.156t.166.357t-.165.356l-8.944 8.95q-.243.243-.566.243t-.566-.243l-4.05-4.05q-.146-.146-.152-.347t.158-.366t.357-.165t.357.165z" stroke-width="0.5" stroke="currentColor" />
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                    class="hidden">
+                                    <path fill="currentColor"
+                                        d="m9.55 15.88l8.802-8.801q.146-.146.344-.156t.363.156t.166.357t-.165.356l-8.944 8.95q-.243.243-.566.243t-.566-.243l-4.05-4.05q-.146-.146-.152-.347t.158-.366t.357-.165t.357.165z"
+                                        stroke-width="0.5" stroke="currentColor" />
                                 </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="text-cinnabar-600">
-                                    <path fill="currentColor" d="M4.126 20q-.234 0-.414-.111t-.28-.293q-.108-.179-.12-.387q-.01-.209.118-.421L11.3 5.212q.128-.212.308-.308T12 4.808t.391.096t.308.308l7.871 13.576q.128.212.117.42q-.01.21-.12.388q-.1.182-.28.293t-.413.111zm.324-1h15.1L12 6zM12 17.616q.262 0 .439-.177t.176-.439t-.177-.438t-.438-.178t-.438.177t-.177.439t.177.439t.438.177m0-2.231q.214 0 .357-.144t.143-.356v-4q0-.213-.144-.357t-.357-.143t-.356.143t-.143.357v4q0 .212.144.356t.357.144M12 12.5" stroke-width="0.5" stroke="currentColor" />
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                    class="text-cinnabar-600">
+                                    <path fill="currentColor"
+                                        d="M4.126 20q-.234 0-.414-.111t-.28-.293q-.108-.179-.12-.387q-.01-.209.118-.421L11.3 5.212q.128-.212.308-.308T12 4.808t.391.096t.308.308l7.871 13.576q.128.212.117.42q-.01.21-.12.388q-.1.182-.28.293t-.413.111zm.324-1h15.1L12 6zM12 17.616q.262 0 .439-.177t.176-.439t-.177-.438t-.438-.178t-.438.177t-.177.439t.177.439t.438.177m0-2.231q.214 0 .357-.144t.143-.356v-4q0-.213-.144-.357t-.357-.143t-.356.143t-.143.357v4q0 .212.144.356t.357.144M12 12.5"
+                                        stroke-width="0.5" stroke="currentColor" />
                                 </svg>
                             </div>
                             <span id="" class="form-part-alert-text text-cinnabar-600 font-medium"></span>
@@ -325,74 +416,111 @@
                     <div class="w-ful h-auto flex flex-col gap-y-2" id="login-form-password-part">
                         <div class="flex flex-col w-full h-auto">
                             <h5 class="text-lg text-woodsmoke-950 font-bold">Create a Password :</h5>
-                            <span class="form-part-label-subtitle text-woodsmoke-500 italic">Must be at least 8 characters with letters and numbers</span>
+                            <span class="form-part-label-subtitle text-woodsmoke-500 italic">Must be at least 8
+                                characters with letters and numbers</span>
                         </div>
-                        <div class="flex flex-row items-center gap-x-2 w-full h-12 border border-mercury-200 rounded-md px-3 signup-input-container">
-                            <input type="password" maxlength="20" class="h-full flex-1 outline-0" placeholder="enter your password here ..." id="signup-password-input">
-                            <button class="py-3 text-woodsmoke-500 hover:text-woodsmoke-950 cursor-pointer" title="Toggle password visibility" id="signup-toggle-password-visibility-btn">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="">
-                                    <path fill="currentColor" d="M12.005 15.154q1.524 0 2.586-1.067t1.063-2.591t-1.067-2.587t-2.591-1.063t-2.587 1.067t-1.063 2.592t1.067 2.586t2.592 1.063M12 14.2q-1.125 0-1.912-.787T9.3 11.5t.788-1.912T12 8.8t1.913.788t.787 1.912t-.787 1.913T12 14.2m.003 3.8q-3.25 0-5.922-1.768T2.077 11.5q1.33-2.964 4.001-4.732T11.998 5t5.921 1.768t4.004 4.732q-1.33 2.964-4.001 4.732T12.002 18M12 17q2.825 0 5.188-1.487T20.8 11.5q-1.25-2.525-3.613-4.012T12 6T6.813 7.488T3.2 11.5q1.25 2.525 3.613 4.013T12 17" stroke-width="0.25" stroke="currentColor" />
+                        <div
+                            class="flex flex-row items-center gap-x-2 w-full h-12 border border-mercury-200 rounded-md px-3 signup-input-container">
+                            <input type="password" maxlength="20" class="h-full flex-1 outline-0"
+                                placeholder="enter your password here ..." id="signup-password-input">
+                            <button class="py-3 text-woodsmoke-500 hover:text-woodsmoke-950 cursor-pointer"
+                                title="Toggle password visibility" id="signup-toggle-password-visibility-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    class="">
+                                    <path fill="currentColor"
+                                        d="M12.005 15.154q1.524 0 2.586-1.067t1.063-2.591t-1.067-2.587t-2.591-1.063t-2.587 1.067t-1.063 2.592t1.067 2.586t2.592 1.063M12 14.2q-1.125 0-1.912-.787T9.3 11.5t.788-1.912T12 8.8t1.913.788t.787 1.912t-.787 1.913T12 14.2m.003 3.8q-3.25 0-5.922-1.768T2.077 11.5q1.33-2.964 4.001-4.732T11.998 5t5.921 1.768t4.004 4.732q-1.33 2.964-4.001 4.732T12.002 18M12 17q2.825 0 5.188-1.487T20.8 11.5q-1.25-2.525-3.613-4.012T12 6T6.813 7.488T3.2 11.5q1.25 2.525 3.613 4.013T12 17"
+                                        stroke-width="0.25" stroke="currentColor" />
                                 </svg>
                             </button>
                         </div>
                         <div class="form-part-alert-container w-full h-auto hidden flex-row items-center gap-x-2">
                             <div class="alert-icons-container flex flex-row">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="hidden">
-                                    <path fill="currentColor" d="m9.55 15.88l8.802-8.801q.146-.146.344-.156t.363.156t.166.357t-.165.356l-8.944 8.95q-.243.243-.566.243t-.566-.243l-4.05-4.05q-.146-.146-.152-.347t.158-.366t.357-.165t.357.165z" stroke-width="0.5" stroke="currentColor" />
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                    class="hidden">
+                                    <path fill="currentColor"
+                                        d="m9.55 15.88l8.802-8.801q.146-.146.344-.156t.363.156t.166.357t-.165.356l-8.944 8.95q-.243.243-.566.243t-.566-.243l-4.05-4.05q-.146-.146-.152-.347t.158-.366t.357-.165t.357.165z"
+                                        stroke-width="0.5" stroke="currentColor" />
                                 </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="text-cinnabar-600">
-                                    <path fill="currentColor" d="M4.126 20q-.234 0-.414-.111t-.28-.293q-.108-.179-.12-.387q-.01-.209.118-.421L11.3 5.212q.128-.212.308-.308T12 4.808t.391.096t.308.308l7.871 13.576q.128.212.117.42q-.01.21-.12.388q-.1.182-.28.293t-.413.111zm.324-1h15.1L12 6zM12 17.616q.262 0 .439-.177t.176-.439t-.177-.438t-.438-.178t-.438.177t-.177.439t.177.439t.438.177m0-2.231q.214 0 .357-.144t.143-.356v-4q0-.213-.144-.357t-.357-.143t-.356.143t-.143.357v4q0 .212.144.356t.357.144M12 12.5" stroke-width="0.5" stroke="currentColor" />
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                    class="text-cinnabar-600">
+                                    <path fill="currentColor"
+                                        d="M4.126 20q-.234 0-.414-.111t-.28-.293q-.108-.179-.12-.387q-.01-.209.118-.421L11.3 5.212q.128-.212.308-.308T12 4.808t.391.096t.308.308l7.871 13.576q.128.212.117.42q-.01.21-.12.388q-.1.182-.28.293t-.413.111zm.324-1h15.1L12 6zM12 17.616q.262 0 .439-.177t.176-.439t-.177-.438t-.438-.178t-.438.177t-.177.439t.177.439t.438.177m0-2.231q.214 0 .357-.144t.143-.356v-4q0-.213-.144-.357t-.357-.143t-.356.143t-.143.357v4q0 .212.144.356t.357.144M12 12.5"
+                                        stroke-width="0.5" stroke="currentColor" />
                                 </svg>
                             </div>
                             <span id="" class="form-part-alert-text text-cinnabar-600 font-medium"></span>
                         </div>
                         <div id="password-indicators" class="flex flex-col gap-y-2 w-full h-auto">
                             <div id="password-strength" class="w-full h-1 bg-mercury-200 rounded-full">
-                                <div id="password-strength-bar" class="h-full bg-cinnabar-500 rounded-full" style="width: 0%"></div>
+                                <div id="password-strength-bar" class="h-full bg-cinnabar-500 rounded-full"
+                                    style="width: 0%"></div>
                             </div>
                             <div id="password-requirements" class="w-full h-auto flex flex-row gap-x-2">
                                 <p>Includes :</p>
-                                <span class="password-requirement-text italic text-woodsmoke-300 font-medium">2 uppercases</span>
-                                <span class="password-requirement-text italic text-woodsmoke-300 font-medium">2 lowercases</span>
-                                <span class="password-requirement-text italic text-woodsmoke-300 font-medium">2 digits</span>
-                                <span class="password-requirement-text italic text-woodsmoke-300 font-medium">2 spec. char.</span>
+                                <span class="password-requirement-text italic text-woodsmoke-300 font-medium">2
+                                    uppercases</span>
+                                <span class="password-requirement-text italic text-woodsmoke-300 font-medium">2
+                                    lowercases</span>
+                                <span class="password-requirement-text italic text-woodsmoke-300 font-medium">2
+                                    digits</span>
+                                <span class="password-requirement-text italic text-woodsmoke-300 font-medium">2 spec.
+                                    char.</span>
                             </div>
                         </div>
                     </div>
                     <div class="w-ful h-auto flex flex-col gap-y-1" id="signup-form-reference-part">
                         <div class="flex flex-col w-full h-auto">
                             <h5 class="text-lg text-woodsmoke-950 font-bold">Invitation Code :</h5>
-                            <span class="form-part-label-subtitle text-woodsmoke-500 italic">A 16 characters code provided another existing user.</span>
+                            <span class="form-part-label-subtitle text-woodsmoke-500 italic">A 16 characters code
+                                provided another existing user.</span>
                         </div>
-                        <div class="flex flex-row items-center gap-x-2 w-full h-12 border border-mercury-200 rounded-md px-3 signup-input-container">
-                            <input type="text" maxlength="20" class="h-full flex-1 outline-0 font-bold placeholder:font-normal" placeholder="type or paste your invitation code in here ..." id="signup-invitation-input">
-                            <button class="py-3 text-woodsmoke-500 hover:text-woodsmoke-950 cursor-pointer" title="click to paste your invitation code in here">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="">
-                                    <path fill="currentColor" d="M5.616 20q-.667 0-1.141-.475T4 18.386V5.615q0-.666.475-1.14T5.615 4h4.637q.14-.586.623-.985q.483-.4 1.125-.4q.654 0 1.134.4q.48.398.62.985h4.63q.667 0 1.142.475T20 5.615v12.77q0 .666-.475 1.14t-1.14.475zm0-1h12.769q.23 0 .423-.192t.192-.424V5.616q0-.231-.192-.424T18.384 5H16v1.423q0 .343-.23.576t-.57.232H8.8q-.34 0-.57-.232T8 6.423V5H5.616q-.231 0-.424.192T5 5.616v12.769q0 .23.192.423t.423.192m6.388-13.77q.345 0 .575-.232q.23-.233.23-.578t-.233-.575t-.578-.23t-.575.234t-.23.578t.234.574t.577.23" stroke-width="0.25" stroke="currentColor" />
+                        <div
+                            class="flex flex-row items-center gap-x-2 w-full h-12 border border-mercury-200 rounded-md px-3 signup-input-container">
+                            <input type="text" maxlength="20"
+                                class="h-full flex-1 outline-0 font-bold placeholder:font-normal"
+                                placeholder="type or paste your invitation code in here ..."
+                                id="signup-invitation-input">
+                            <button class="py-3 text-woodsmoke-500 hover:text-woodsmoke-950 cursor-pointer"
+                                title="click to paste your invitation code in here">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    class="">
+                                    <path fill="currentColor"
+                                        d="M5.616 20q-.667 0-1.141-.475T4 18.386V5.615q0-.666.475-1.14T5.615 4h4.637q.14-.586.623-.985q.483-.4 1.125-.4q.654 0 1.134.4q.48.398.62.985h4.63q.667 0 1.142.475T20 5.615v12.77q0 .666-.475 1.14t-1.14.475zm0-1h12.769q.23 0 .423-.192t.192-.424V5.616q0-.231-.192-.424T18.384 5H16v1.423q0 .343-.23.576t-.57.232H8.8q-.34 0-.57-.232T8 6.423V5H5.616q-.231 0-.424.192T5 5.616v12.769q0 .23.192.423t.423.192m6.388-13.77q.345 0 .575-.232q.23-.233.23-.578t-.233-.575t-.578-.23t-.575.234t-.23.578t.234.574t.577.23"
+                                        stroke-width="0.25" stroke="currentColor" />
                                 </svg>
                             </button>
                         </div>
                         <div class="form-part-alert-container w-full h-auto hidden flex-row items-center gap-x-2">
                             <div class="alert-icons-container flex flex-row">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="hidden">
-                                    <path fill="currentColor" d="m9.55 15.88l8.802-8.801q.146-.146.344-.156t.363.156t.166.357t-.165.356l-8.944 8.95q-.243.243-.566.243t-.566-.243l-4.05-4.05q-.146-.146-.152-.347t.158-.366t.357-.165t.357.165z" stroke-width="0.5" stroke="currentColor" />
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                    class="hidden">
+                                    <path fill="currentColor"
+                                        d="m9.55 15.88l8.802-8.801q.146-.146.344-.156t.363.156t.166.357t-.165.356l-8.944 8.95q-.243.243-.566.243t-.566-.243l-4.05-4.05q-.146-.146-.152-.347t.158-.366t.357-.165t.357.165z"
+                                        stroke-width="0.5" stroke="currentColor" />
                                 </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="text-cinnabar-600">
-                                    <path fill="currentColor" d="M4.126 20q-.234 0-.414-.111t-.28-.293q-.108-.179-.12-.387q-.01-.209.118-.421L11.3 5.212q.128-.212.308-.308T12 4.808t.391.096t.308.308l7.871 13.576q.128.212.117.42q-.01.21-.12.388q-.1.182-.28.293t-.413.111zm.324-1h15.1L12 6zM12 17.616q.262 0 .439-.177t.176-.439t-.177-.438t-.438-.178t-.438.177t-.177.439t.177.439t.438.177m0-2.231q.214 0 .357-.144t.143-.356v-4q0-.213-.144-.357t-.357-.143t-.356.143t-.143.357v4q0 .212.144.356t.357.144M12 12.5" stroke-width="0.5" stroke="currentColor" />
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                    class="text-cinnabar-600">
+                                    <path fill="currentColor"
+                                        d="M4.126 20q-.234 0-.414-.111t-.28-.293q-.108-.179-.12-.387q-.01-.209.118-.421L11.3 5.212q.128-.212.308-.308T12 4.808t.391.096t.308.308l7.871 13.576q.128.212.117.42q-.01.21-.12.388q-.1.182-.28.293t-.413.111zm.324-1h15.1L12 6zM12 17.616q.262 0 .439-.177t.176-.439t-.177-.438t-.438-.178t-.438.177t-.177.439t.177.439t.438.177m0-2.231q.214 0 .357-.144t.143-.356v-4q0-.213-.144-.357t-.357-.143t-.356.143t-.143.357v4q0 .212.144.356t.357.144M12 12.5"
+                                        stroke-width="0.5" stroke="currentColor" />
                                 </svg>
                             </div>
                             <span id="" class="form-part-alert-text text-cinnabar-600 font-medium"></span>
                         </div>
                         <div class="flex justify-end w-full">
-                            <a href="#" class="underline text-pizza-600 hover:text-pizza-700 text-sm font-medium">Buy an Invitation Code</a>
+                            <a href="#" class="underline text-pizza-600 hover:text-pizza-700 text-sm font-medium">Buy an
+                                Invitation Code</a>
                         </div>
                     </div>
                     <div id="login-form-submit-part" class="flex flex-col gap-y-1 items-center">
-                        <button disabled class="w-full h-auto py-3 bg-pizza-200 text-pizza-950 rounded-md font-bold cursor-not-allowed opacity-50" id="shew-signup-signup-btn">Sign Up</button>
+                        <button disabled type="submit"
+                            class="w-full h-auto py-3 bg-pizza-200 text-pizza-950 rounded-md font-bold cursor-not-allowed opacity-50"
+                            id="shew-signup-signup-btn">Sign Up</button>
                         <small class="block max-w-[400px] w-full text-xs">
-                            By Signing up, you agree to the 
-                            <a href="" class="text-pizza-600 underline hover:text-pizza-700">Terms of Use</a> and 
-                            <a href="" class="text-pizza-600 underline hover:text-pizza-700">Privacy Policy</a> including 
+                            By Signing up, you agree to the
+                            <a href="" class="text-pizza-600 underline hover:text-pizza-700">Terms of Use</a> and
+                            <a href="" class="text-pizza-600 underline hover:text-pizza-700">Privacy Policy</a>
+                            including
                             <a href="" class="text-pizza-600 underline hover:text-pizza-700">Cookie's Usage</a>
                         </small>
                     </div>
@@ -402,23 +530,39 @@
                             <p class="text-woodsmoke-200 text-sm">or</p>
                             <span class="thin-line flex-1 h-[0.0625rem] bg-mercury-300"></span>
                         </div>
-                        <button class="w-full h-auto py-3 bg-mercury-50 hover:bg-mercury-100 text-woodsmoke-950 rounded-md font-bold cursor-pointer flex flex-row gap-x-2 items-center justify-center">
+                        <button
+                            class="w-full h-auto py-3 bg-mercury-50 hover:bg-mercury-100 text-woodsmoke-950 rounded-md font-bold cursor-pointer flex flex-row gap-x-2 items-center justify-center">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 48 48">
-                                <path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"></path>
-                                <path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"></path>
-                                <path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"></path>
-                                <path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"></path>
+                                <path fill="#FFC107"
+                                    d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z">
+                                </path>
+                                <path fill="#FF3D00"
+                                    d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z">
+                                </path>
+                                <path fill="#4CAF50"
+                                    d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z">
+                                </path>
+                                <path fill="#1976D2"
+                                    d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z">
+                                </path>
                             </svg>
                             Sign Up with Google
                         </button>
                     </div>
-                    <div class="form-part-alert-container w-full h-auto hidden flex-row items-center gap-x-2" id="signup-form-general-alert-container">
+                    <div class="form-part-alert-container w-full h-auto hidden flex-row items-center gap-x-2"
+                        id="signup-form-general-alert-container">
                         <div class="alert-icons-container flex flex-row">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="hidden">
-                                <path fill="currentColor" d="m9.55 15.88l8.802-8.801q.146-.146.344-.156t.363.156t.166.357t-.165.356l-8.944 8.95q-.243.243-.566.243t-.566-.243l-4.05-4.05q-.146-.146-.152-.347t.158-.366t.357-.165t.357.165z" stroke-width="0.5" stroke="currentColor" />
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                class="hidden">
+                                <path fill="currentColor"
+                                    d="m9.55 15.88l8.802-8.801q.146-.146.344-.156t.363.156t.166.357t-.165.356l-8.944 8.95q-.243.243-.566.243t-.566-.243l-4.05-4.05q-.146-.146-.152-.347t.158-.366t.357-.165t.357.165z"
+                                    stroke-width="0.5" stroke="currentColor" />
                             </svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="text-cinnabar-600">
-                                <path fill="currentColor" d="M4.126 20q-.234 0-.414-.111t-.28-.293q-.108-.179-.12-.387q-.01-.209.118-.421L11.3 5.212q.128-.212.308-.308T12 4.808t.391.096t.308.308l7.871 13.576q.128.212.117.42q-.01.21-.12.388q-.1.182-.28.293t-.413.111zm.324-1h15.1L12 6zM12 17.616q.262 0 .439-.177t.176-.439t-.177-.438t-.438-.178t-.438.177t-.177.439t.177.439t.438.177m0-2.231q.214 0 .357-.144t.143-.356v-4q0-.213-.144-.357t-.357-.143t-.356.143t-.143.357v4q0 .212.144.356t.357.144M12 12.5" stroke-width="0.5" stroke="currentColor" />
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                class="text-cinnabar-600">
+                                <path fill="currentColor"
+                                    d="M4.126 20q-.234 0-.414-.111t-.28-.293q-.108-.179-.12-.387q-.01-.209.118-.421L11.3 5.212q.128-.212.308-.308T12 4.808t.391.096t.308.308l7.871 13.576q.128.212.117.42q-.01.21-.12.388q-.1.182-.28.293t-.413.111zm.324-1h15.1L12 6zM12 17.616q.262 0 .439-.177t.176-.439t-.177-.438t-.438-.178t-.438.177t-.177.439t.177.439t.438.177m0-2.231q.214 0 .357-.144t.143-.356v-4q0-.213-.144-.357t-.357-.143t-.356.143t-.143.357v4q0 .212.144.356t.357.144M12 12.5"
+                                    stroke-width="0.5" stroke="currentColor" />
                             </svg>
                         </div>
                         <span id="" class="form-part-alert-text text-cinnabar-600 font-medium">s</span>
@@ -429,7 +573,7 @@
 
 
         <section class="section main-section w-full h-full max-w-full max-h-full hidden" id="chats-section">
-            CHats Section
+            Chats Section
         </section>
 
 
@@ -462,6 +606,13 @@
             Account Section
         </section>
     </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-storage-compat.js"></script>
+
+    <script type="module" src="./src/javascripts/main.js" defer></script>
 </body>
 
 </html>
