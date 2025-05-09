@@ -1,5 +1,4 @@
-import { auth } from '../data/firebaseConfig.js';
-import { db } from '../data/firebaseConfig.js'; // Firestore
+import { auth, db } from '../data/firebaseConfig.js';
 import { updateAuthUI } from './authState.js';
 import { hideLoginWindow, showSection } from '../ui/toggleSections.js';
 
@@ -21,18 +20,30 @@ shewIdInput.addEventListener('input', () => {
     const formatted = raw.slice(0, 9).replace(/(.{3})(?=.)/g, '$1-');
     shewIdInput.value = formatted;
 
-    if (formatted.length < 11) {
+    validateShewIdInput(); // ✅ NEW
+    updateLoginButtonState();
+});
+
+function validateShewIdInput() {
+    const value = shewIdInput.value.trim();
+
+    if (value === '') {
+        shewIdAlert.textContent = 'SHEW ID is required';
+        shewIdAlert.parentElement.classList.remove('hidden');
+        shewIdAlert.parentElement.classList.add('flex', 'flex-row');
+    } else if (value.length < 11) {
         shewIdAlert.textContent = 'SHEW ID value is incomplete';
         shewIdAlert.parentElement.classList.remove('hidden');
         shewIdAlert.parentElement.classList.add('flex', 'flex-row');
     } else {
         shewIdAlert.parentElement.classList.add('hidden');
     }
+}
 
+shewIdInput.addEventListener('blur', () => {
+    validateShewIdInput();
     updateLoginButtonState();
 });
-
-shewIdInput.addEventListener('blur', updateLoginButtonState);
 
 // Password validation
 function validatePasswordInput() {
