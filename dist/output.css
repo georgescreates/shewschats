@@ -8,8 +8,6 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-red-400: oklch(70.4% 0.191 22.216);
-    --color-green-500: oklch(72.3% 0.219 149.579);
     --color-green-600: oklch(62.7% 0.194 149.214);
     --color-green-700: oklch(52.7% 0.154 150.069);
     --color-white: #fff;
@@ -52,7 +50,6 @@
     --color-pizza-950: #3c1f0c;
     --color-cinnabar-50: #fef4f2;
     --color-cinnabar-200: #fdd2cb;
-    --color-cinnabar-300: #fab2a7;
     --color-cinnabar-500: #e94f37;
     --color-cinnabar-600: #d8412a;
     --color-cinnabar-800: #962e1e;
@@ -260,6 +257,24 @@
   .z-200 {
     z-index: 200;
   }
+  .container {
+    width: 100%;
+    @media (width >= 40rem) {
+      max-width: 40rem;
+    }
+    @media (width >= 48rem) {
+      max-width: 48rem;
+    }
+    @media (width >= 64rem) {
+      max-width: 64rem;
+    }
+    @media (width >= 80rem) {
+      max-width: 80rem;
+    }
+    @media (width >= 96rem) {
+      max-width: 96rem;
+    }
+  }
   .block {
     display: block;
   }
@@ -310,6 +325,9 @@
   }
   .w-\[2\.5rem\] {
     width: 2.5rem;
+  }
+  .w-\[20\%\] {
+    width: 20%;
   }
   .w-\[20px\] {
     width: 20px;
@@ -403,6 +421,9 @@
   .gap-x-2 {
     column-gap: calc(var(--spacing) * 2);
   }
+  .gap-x-4 {
+    column-gap: calc(var(--spacing) * 4);
+  }
   .gap-x-\[3rem\] {
     column-gap: 3rem;
   }
@@ -455,14 +476,8 @@
   .bg-cinnabar-600 {
     background-color: var(--color-cinnabar-600);
   }
-  .bg-green-500 {
-    background-color: var(--color-green-500);
-  }
   .bg-green-600 {
     background-color: var(--color-green-600);
-  }
-  .bg-green-700 {
-    background-color: var(--color-green-700);
   }
   .bg-mercury-50 {
     background-color: var(--color-mercury-50);
@@ -485,11 +500,11 @@
   .bg-white {
     background-color: var(--color-white);
   }
-  .bg-woodsmoke-700 {
-    background-color: var(--color-woodsmoke-700);
-  }
   .object-contain {
     object-fit: contain;
+  }
+  .p-2 {
+    padding: calc(var(--spacing) * 2);
   }
   .px-3 {
     padding-inline: calc(var(--spacing) * 3);
@@ -568,6 +583,9 @@
   }
   .text-cinnabar-800 {
     color: var(--color-cinnabar-800);
+  }
+  .text-green-700 {
+    color: var(--color-green-700);
   }
   .text-mercury-300 {
     color: var(--color-mercury-300);

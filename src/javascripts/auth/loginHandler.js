@@ -80,8 +80,7 @@ export function initLoginForm() {
     loginForm.addEventListener('submit', async (e) => {
         e.preventDefault();
 
-        const shewIdFormatted = shewIdInput.value.trim().toUpperCase(); // Ex: ABC-123-XYZ
-        const shewIdClean = shewIdFormatted.replace(/-/g, ''); // ABC123XYZ
+        const shewIdFormatted = shewIdInput.value.trim().toUpperCase();
         const password = passwordInput.value.trim();
 
         // Basic front-end validation
@@ -100,8 +99,8 @@ export function initLoginForm() {
         try {
             // Look up user in Firestore by shewId
             const snapshot = await db.collection('users')
-                .where('role', '==', 'shew')
-                .where('shewId', '==', shewIdClean)
+                .where('roles.isShew', '==', true)
+                .where('roles.shewID', '==', shewIdFormatted)
                 .limit(1)
                 .get();
 
@@ -121,7 +120,7 @@ export function initLoginForm() {
             }
 
             const userDoc = snapshot.docs[0];
-            const email = userDoc.data().email;
+            const email = userDoc.data().email?.value;
 
             // Try sign in with email and password
             await auth.signInWithEmailAndPassword(email, password);
@@ -194,3 +193,8 @@ function updateLoginButtonState() {
     loginBtn.classList.toggle('cursor-not-allowed', loginBtn.disabled);
     loginBtn.classList.toggle('cursor-pointer', !loginBtn.disabled);
 }
+
+
+
+
+const forgotPasswordLink = document.getElementById('forgot-password-link');

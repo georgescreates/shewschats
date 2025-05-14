@@ -8,6 +8,7 @@ const loadingMessages = {
     earnings: "Fetching your earnings...",
     stats: "Gathering your stats...",
     account: "Preparing account info...",
+    logout: "Logging you out..."
 };
 
 function showLoadingForSection(sectionKey) {
@@ -116,4 +117,16 @@ export function redirectToLoginWithDelay(sectionKey) {
         loginWindow?.classList.remove('hidden');
         loginWindow?.classList.add('flex');
     }, 1000);
+}
+
+
+export function showResetPasswordWindow() {
+    const loginWindow = document.getElementById('login-window');
+    const resetWindow = document.getElementById('reset-password-window');
+
+    loginWindow?.classList.add('hidden');
+    loginWindow?.classList.remove('flex');
+
+    resetWindow?.classList.remove('hidden');
+    resetWindow?.classList.add('flex');
 }

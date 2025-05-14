@@ -366,18 +366,18 @@ form.addEventListener('submit', async (e) => {
     try {
         const codeDocRef = db.collection('invitation-codes').doc(rawCode);
         const codeSnap = await codeDocRef.get();
-    
+
         if (!codeSnap.exists) {
             invitationAlertContainer.classList.remove('hidden');
             invitationAlertContainer.classList.add('flex');
             invitationAlertText.textContent = 'Invalid invitation code';
-    
+
             restoreSignupButton(); // utility to reset loading state
             return;
         }
-    
+
         const data = codeSnap.data();
-    
+
         // ✅ Check expiry
         const now = new Date();
         const expiryDate = data.expiry?.expiringOn?.toDate?.() || new Date(0);
@@ -388,12 +388,12 @@ form.addEventListener('submit', async (e) => {
             restoreSignupButton();
             return;
         }
-    
+
         // ✅ Check usage count
         const usedByMap = data.usedBy || {};
         const usageCount = Object.keys(usedByMap).length;
         const usageLimit = data.usage?.limit || 1;
-    
+
         if (usageCount >= usageLimit) {
             invitationAlertContainer.classList.remove('hidden');
             invitationAlertContainer.classList.add('flex');
@@ -401,9 +401,9 @@ form.addEventListener('submit', async (e) => {
             restoreSignupButton();
             return;
         }
-    
+
         console.log('✅ Invitation code is valid and within usage limit');
-    
+
         // ⏭️ Continue with account creation here...
         const email = emailInput.value.trim();
         const password = passwordInput.value.trim();
@@ -419,7 +419,7 @@ form.addEventListener('submit', async (e) => {
             restoreSignupButton();
             return;
         }
-        
+
         const user = userCredential.user;
 
         function generateShewID() {
@@ -428,20 +428,37 @@ form.addEventListener('submit', async (e) => {
             for (let i = 0; i < 9; i++) raw += chars[Math.floor(Math.random() * chars.length)];
             return raw.replace(/(.{3})(?=.)/g, '$1-'); // Format as XXX-XXX-XXX
         }
-        
+
         const shewId = generateShewID();
-        
+
         await db.collection('users').doc(user.uid).set({
-            email,
-            shewId,
-            username: usernameInput.value.trim(),
-            firstName: firstNameInput.value.trim(),
-            dob: dobInput.value.trim(),
-            role: 'shew',
-            createdAt: firebase.firestore.FieldValue.serverTimestamp()
+            email: {
+                value: email,
+                isVerified: false
+            },
+            roles: {
+                isShew: true,
+                shewID: shewId
+            },
+            creation: {
+                createdAt: firebase.firestore.FieldValue.serverTimestamp()
+            },
+            accountSettings: {
+                language: 'english',
+                theme: 'light'
+            },
+            earnings: {
+                total: 0,
+                sessionCount: 0
+            },
+            availability: {
+                isActive: true,
+                isOnline: false
+            },
+            profileImages: [] // Dynamic array up to 5 images
         });
-        
-        
+
+
         await db.collection('invitation-codes').doc(rawCode).update({
             [`usedBy.${user.uid}`]: firebase.firestore.FieldValue.serverTimestamp()
         });
@@ -450,10 +467,8 @@ form.addEventListener('submit', async (e) => {
 
         updateAuthUI(user);
         hideSignupWindow();
-        showSection('chats', true);
+        showSection('account', true);
         form.reset();
-
-    
     } catch (error) {
         console.error('🔥 Error verifying invitation code:', error);
         invitationAlertContainer.classList.remove('hidden');
@@ -461,7 +476,7 @@ form.addEventListener('submit', async (e) => {
         invitationAlertText.textContent = 'Error checking invitation code. Try again later.';
         restoreSignupButton();
     }
-    
+
 });
 
 function restoreSignupButton() {
