@@ -443,6 +443,9 @@ form.addEventListener('submit', async (e) => {
             creation: {
                 createdAt: firebase.firestore.FieldValue.serverTimestamp()
             },
+            firstName: firstNameInput.value.trim(),
+            dob: firebase.firestore.Timestamp.fromDate(new Date(dobInput.value)),
+            username: usernameInput.value.trim(),
             accountSettings: {
                 language: 'english',
                 theme: 'light'
@@ -455,8 +458,10 @@ form.addEventListener('submit', async (e) => {
                 isActive: true,
                 isOnline: false
             },
-            profileImages: [] // Dynamic array up to 5 images
+            profileImages: [],
+            bio: ""
         });
+
 
 
         await db.collection('invitation-codes').doc(rawCode).update({

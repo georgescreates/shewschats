@@ -130,3 +130,23 @@ export function showResetPasswordWindow() {
     resetWindow?.classList.remove('hidden');
     resetWindow?.classList.add('flex');
 }
+
+export function initAccountTabSwitching() {
+    const tabButtons = document.querySelectorAll('.account-resources-tab-btn');
+    const accountTabs = document.querySelectorAll('.account-resources-tab');
+
+    tabButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const targetKey = btn.dataset.tab;
+            const targetTab = document.getElementById(`account-${targetKey}-tab`);
+
+            // Update buttons
+            tabButtons.forEach(b => b.classList.remove('active-tab'));
+            btn.classList.add('active-tab');
+
+            // Update panes
+            accountTabs.forEach(tab => tab.classList.add('hidden'));
+            targetTab?.classList.remove('hidden');
+        });
+    });
+}

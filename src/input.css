@@ -128,3 +128,21 @@
     background-position: center;
     background-size: 70%;
 }
+
+#profile-bio-text-area:empty::before {
+    content: attr(data-placeholder);
+    color: #adadad;
+    /* or var(--color-mercury-400) */
+    pointer-events: none;
+    display: block;
+}
+
+.account-resources-tab-btn.active{
+    color: var(--color-woodsmoke-950);
+    font-weight: bold;
+    border-bottom: var(--color-woodsmoke-950) 2px solid;
+}
+
+.account-galery-square {
+    aspect-ratio: 1 / 1;
+}
