@@ -141,12 +141,13 @@ export function initAccountTabSwitching() {
             const targetTab = document.getElementById(`account-${targetKey}-tab`);
 
             // Update buttons
-            tabButtons.forEach(b => b.classList.remove('active-tab'));
-            btn.classList.add('active-tab');
+            tabButtons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
 
             // Update panes
             accountTabs.forEach(tab => tab.classList.add('hidden'));
             targetTab?.classList.remove('hidden');
+            targetTab?.classList.add('flex');
         });
     });
 }

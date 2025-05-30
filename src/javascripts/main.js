@@ -5,6 +5,7 @@ import { initLoginForm } from './auth/loginHandler.js';
 import { initSignupForm } from './auth/signupHandler.js';
 import { initPasswordResetForm } from './auth/resetPasswordHandler.js';
 import { initAccountGalleryUpload, createImageSquare, updatePhotoCounter } from './ui/uploadImages.js';
+import { initWishlistInputWatcher, createWishlistCard, appendToWishlistGrid, updateWishlistInfoDisplay } from './ui/addToWishlist.js';
 import { DOM } from './dom.js';
 import { db } from './data/firebaseConfig.js';
 import { auth } from './auth/firebaseAuth.js'; // Adjust if path differs
@@ -66,37 +67,27 @@ async function displayUserPhotos(photos = []) {
     const galleryGrid = document.getElementById('account-galery-grid');
     if (!galleryGrid) return;
 
-    // Clear existing photos to prevent duplicates on re-render
     galleryGrid.innerHTML = '';
 
-    photos.forEach(item => {
-        let url;
-        let path;
+    let row;
+    photos.forEach((entry, index) => {
+        const rawUrl = typeof entry === 'string' ? entry : entry.url;
+        const rawPath = typeof entry === 'string' ? null : entry.path;
 
-        if (typeof item === 'string') {
-            // This is an old photo entry (just a URL string)
-            url = item;
-            path = getPathFromDownloadURL(item); // Derive path for old photos
-            if (!path) {
-                console.warn("Could not derive path for old photo, skipping display:", item);
-                return; // Skip if path cannot be derived
-            }
-            console.log("Derived path for old photo:", path);
-        } else if (item && item.url && item.path) {
-            // This is a new photo entry (object with url and path)
-            url = item.url;
-            path = item.path;
-        } else {
-            console.warn("Skipping invalid photo data format:", item);
-            return; // Skip completely malformed entries
+        if (!rawUrl || typeof rawUrl !== 'string') {
+            console.warn('🚨 Skipping invalid photo entry:', entry);
+            return;
         }
 
-        // Only create square if a valid URL and path are found
-        if (url && path) {
-            // Pass both the URL and the derived/stored filePath to createImageSquare
-            const square = createImageSquare(url, path, true, false); // showDelete is true, not uploading
-            galleryGrid.appendChild(square);
+        const square = createImageSquare(rawUrl, rawPath, true, false); // ✅ include rawPath
+
+        if (index % 3 === 0) {
+            row = document.createElement('div');
+            row.className = 'gallery-row flex flex-row gap-1 w-full';
+            galleryGrid.appendChild(row);
         }
+
+        row.appendChild(square);
     });
 
     updatePhotoCounter();
@@ -114,6 +105,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   initAccountGalleryUpload();
   initAccountTabSwitching();
+
+  initWishlistInputWatcher();
 
   const loadingWindow = document.getElementById('loading-window');
   if (loadingWindow) {
@@ -149,24 +142,34 @@ document.addEventListener('DOMContentLoaded', () => {
           document.getElementById('profile-info-name').textContent = name;
           document.getElementById('profile-info-age').textContent = " • " + `${age}`;
           document.getElementById('profile-info-username').textContent = username;
-          initUsernameEdit(username);
+          // initUsernameEdit(username);
           document.getElementById('profile-info-shewid').textContent = shewID;
 
           const bioDiv = document.getElementById('profile-bio-text-area');
           bioDiv.innerHTML = data.bio || '';
 
           // Adjust bio text area height if content overflows
-          if (bioDiv.scrollHeight > bioDiv.clientHeight) {
-            bioDiv.style.height = bioDiv.scrollHeight + 'px';
-          }
+          // if (bioDiv.scrollHeight > bioDiv.clientHeight) {
+          //   bioDiv.style.height = bioDiv.scrollHeight + 'px';
+          // }
 
-          initBioEdit();
+          // initBioEdit();
 
           // Ensure data.photos is an array for displayUserPhotos
           if (Array.isArray(data.photos)) {
               displayUserPhotos(data.photos);
           } else {
               displayUserPhotos([]); // Ensure it's always an array if no photos exist
+          }
+
+          const wishlistTab = document.getElementById('wishlist-tab-btn');
+          if (wishlistTab && Array.isArray(data.wishlist)) {
+            data.wishlist.forEach(item => {
+              const card = createWishlistCard(item);
+              appendToWishlistGrid(card);
+            });
+
+            updateWishlistInfoDisplay(data.wishlist);
           }
       }
     } else {

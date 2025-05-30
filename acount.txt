@@ -1,0 +1,161 @@
+<div id="profile-info-name-age-wrapper" class="flex flex-row gap-x-4">
+    <h3 class="font-medium text-sm text-mercury-400 flex flex-row gap-x-1 items-center">
+        <span id="profile-info-name" class="inline-flex"></span>
+        <span id="profile-info-age" class="inline-flex"></span>
+        <span id="profile-info-location" class="inline-flex">• Findlay, OH</span>
+    </h3>
+</div>
+
+<div id="badge-footer" class="flex flex-row gap-x-2 w-full h-12">
+    <button class="flex flex-row items-center justify-center gap-x-2 flex-1/2 h-12 py-3 px-5 bg-mercury-50 rounded-md text-woodsmoke-950 font-bold cursor-pointer hover:bg-mercury-100 transition-all" id="edit-profile-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M5.616 20q-.691 0-1.153-.462T4 18.384V5.616q0-.691.463-1.153T5.616 4h7.178q.25 0 .375.159q.125.158.125.341t-.128.341T12.79 5H5.616q-.231 0-.424.192T5 5.616v12.769q0 .23.192.423t.423.192h12.77q.23 0 .423-.192t.192-.423V11.11q0-.25.159-.375q.158-.125.341-.125t.341.125t.159.375v7.275q0 .69-.462 1.153T18.384 20zM10 13.192v-1.136q0-.323.13-.628q.132-.305.349-.522l8.465-8.465q.166-.166.348-.23t.385-.063q.189 0 .368.064t.326.21L21.483 3.5q.16.166.242.365t.083.4t-.061.382q-.06.18-.226.345l-8.523 8.524q-.217.217-.522.35q-.305.134-.628.134h-1.04q-.349 0-.578-.23t-.23-.578m10.814-8.907l-1.112-1.17zM11 13h1.092l6.666-6.666l-.546-.546l-.61-.584L11 11.806zm7.212-7.211l-.61-.585zl.546.546z" stroke-width="0.25" stroke="currentColor" />
+        </svg>
+        Edit Profile
+    </button>
+    <button class="flex flex-row items-center justify-center gap-x-2 flex-1/2 h-12 py-3 px-5 bg-mercury-50 rounded-md text-woodsmoke-950 font-bold cursor-pointer hover:bg-mercury-100 transition-all" id="share-profile-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M6.616 22q-.691 0-1.153-.462T5 20.385v-9.77q0-.69.463-1.152T6.616 9H8.23q.213 0 .357.143t.143.357t-.143.357T8.23 10H6.616q-.231 0-.424.192T6 10.616v9.769q0 .23.192.423t.423.192h10.77q.23 0 .423-.192t.192-.423v-9.77q0-.23-.192-.423T17.384 10H15.77q-.213 0-.357-.143T15.27 9.5t.143-.357T15.77 9h1.615q.691 0 1.153.463T19 10.616v9.769q0 .69-.463 1.153T17.385 22zM11.5 4.614L9.754 6.36q-.146.146-.344.153q-.199.006-.364-.16q-.16-.164-.162-.353t.162-.354l2.388-2.388q.243-.243.566-.243t.566.243l2.388 2.388q.14.14.15.342q.01.2-.15.366q-.166.165-.357.165t-.357-.165l-1.74-1.74V15q0 .214-.143.357T12 15.5t-.357-.143T11.5 15z" stroke-width="0.25" stroke="currentColor" />
+        </svg>
+        Share Profile
+    </button>
+</div>
+                
+                    
+                </div>
+
+                
+                    <div id="profile-headline-container" class="h-10 flex flex-row items-center border">
+                        <h4 id="profile-headline" class="font-bold text-[1.1rem]">🖐️Howdy! Let's forget time ever
+                            existed.</h4>
+                    </div>
+                    
+                    <!-- <div id="profile-bio-display" class="flex flex-row justify-between"> -->
+                        <!-- <div id="profile-bio-counter-container" class="flex flex-row text-sm text-mercury-400">
+                            <span>00</span>
+                            <span>/</span>
+                            <span>256</span>
+                        </div> -->
+                        <!-- <div id="profile-bio-ctas-container" class="flex flex-row gap-x-2 items-center justify-end">
+                            <button id="to-edit-bio-btn"
+                                class="cursor-pointer text-pizza-600 hover:text-pizza-800 underline font-normal text-sm">
+                                edit
+                            </button>
+                            <button id="to-save-bio-btn"
+                                class="cursor-pointer text-pizza-600 hover:text-pizza-800 underline font-normal text-sm hidden">
+                                save
+                            </button>
+                            <button id="to-cancel-bio-btn"
+                                class="cursor-pointer text-woodsmoke-400 hover:text-woodsmoke-950 underline font-normal text-sm hidden">
+                                cancel
+                            </button>
+                        </div> -->
+                    <!-- </div> -->
+                </div>
+
+                
+                    
+                    <!-- <button type="button" id="logout-btn"
+                        class="flex flex-row items-center justify-center gap-x-2 flex-1 h-auto py-3 px-5 rounded-md font-bold cursor-pointer bg-pizza-50 text-pizza-800">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="M4 20V4h8.02v1H5v14h7.02v1zm12.462-4.461l-.702-.72l2.319-2.319H9.192v-1h8.887l-2.32-2.32l.702-.718L20 12z"
+                                stroke-width="0.25" stroke="currentColor" />
+                        </svg>
+                        Log Out
+                    </button> -->
+                    <!-- <button type="button"
+                        class="flex flex-row items-center justify-center gap-x-2 flex-1 h-auto py-3 px-5 text-woodsmoke-950 rounded-md font-bold cursor-pointer bg-mercury-50">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="M12.05 19.5q-3.139 0-5.344-2.19T4.5 12v-1.386l-2.1 2.1l-.708-.708L5 8.698l3.308 3.308l-.708.708l-2.1-2.1V12q0 2.712 1.907 4.606T12.05 18.5q.592 0 1.208-.121q.615-.121 1.196-.364l.75.75q-.738.358-1.537.546t-1.617.189M19 15.302l-3.308-3.308l.708-.707l2.1 2.1V12q0-2.711-1.907-4.606T11.95 5.5q-.592 0-1.208.121q-.615.121-1.196.363l-.75-.75q.739-.357 1.537-.546q.798-.188 1.617-.188q3.139 0 5.344 2.19T19.5 12v1.387l2.1-2.1l.708.707z"
+                                stroke-width="0.25" stroke="currentColor" />
+                        </svg>
+                        Switch as STEM
+                    </button> -->
+                </div>
+
+            
+                <div id="account-resources-head" class="w-full h-12 flex flex-row">
+                    <button type="button" class="account-resources-tab-btn py-3 flex-1 w-auto h-full flex flex-row gap-x-1 items-center justify-center text-woodsmoke-400 cursor-pointer" id="photos-tab-btn" data-tab="photos">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="M9.154 13.692h8.692l-2.758-3.653l-2.453 3.077l-1.589-1.885zM8.116 17q-.691 0-1.153-.462T6.5 15.385V4.615q0-.69.463-1.153T8.116 3h10.769q.69 0 1.153.462t.462 1.153v10.77q0 .69-.462 1.152T18.884 17zm0-1h10.769q.23 0 .423-.192t.192-.423V4.615q0-.23-.192-.423T18.884 4H8.116q-.231 0-.424.192t-.192.423v10.77q0 .23.192.423t.423.192m-3 4q-.69 0-1.153-.462T3.5 18.385V6.615h1v11.77q0 .23.192.423t.423.192h11.77v1zM7.5 4v12z"
+                                stroke-width="0.25" stroke="currentColor" />
+                        </svg>
+                        Photos
+                    </button>
+                    <button type="button"
+                        class="account-resources-tab-btn py-3 flex-1 w-auto h-full flex flex-row gap-x-1 items-center justify-center text-woodsmoke-400 cursor-pointer"
+                        id="videos-tab-btn" data-tab="videos">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="M16.275 10.51q.292-.187.292-.51t-.292-.51l-3.836-2.47q-.298-.212-.619-.038t-.32.547v4.942q0 .373.32.547t.618-.037zM8.115 17q-.69 0-1.152-.462T6.5 15.385V4.615q0-.69.463-1.153T8.116 3h10.769q.69 0 1.153.462t.462 1.153v10.77q0 .69-.462 1.152T18.884 17zm0-1h10.77q.23 0 .423-.192t.192-.423V4.615q0-.23-.192-.423T18.884 4H8.116q-.231 0-.424.192t-.192.423v10.77q0 .23.192.423t.423.192m-3 4q-.69 0-1.153-.462T3.5 18.385V7.115q0-.213.143-.356T4 6.616t.357.143t.143.357v11.269q0 .23.192.423t.423.192h11.27q.213 0 .356.143t.144.357t-.144.357t-.356.143zM7.5 4v12z"
+                                stroke-width="0.25" stroke="currentColor" />
+                        </svg>
+                        Videos
+                    </button>
+                    <button type="button"
+                        class="account-resources-tab-btn py-3 flex-1 w-auto h-full flex flex-row gap-x-1 items-center justify-center text-woodsmoke-400 cursor-pointer"
+                        id="notes-tab-btn" data-tab="notes">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="M12 13q-.846 0-1.423-.577T10 11V5q0-.846.577-1.423T12 3t1.423.577T14 5v6q0 .846-.577 1.423T12 13m-.5 7v-3.017q-2.165-.19-3.716-1.72q-1.551-1.529-1.748-3.738q-.03-.214.11-.37Q6.286 11 6.5 11t.357.153t.185.366q.197 1.923 1.623 3.202T12 16q1.935 0 3.348-1.291q1.413-1.292 1.61-3.19q.042-.213.185-.366T17.5 11t.354.156t.11.369q-.197 2.16-1.735 3.704T12.5 16.983V20q0 .214-.143.357T12 20.5t-.357-.143T11.5 20m.5-8q.425 0 .713-.288T13 11V5q0-.425-.288-.712T12 4t-.712.288T11 5v6q0 .425.288.713T12 12"
+                                stroke-width="0.25" stroke="currentColor" />
+                        </svg>
+                        Notes
+                    </button>
+                    <button type="button"
+                        class="account-resources-tab-btn py-3 flex-1 w-auto h-full flex flex-row gap-x-1 items-center justify-center text-woodsmoke-400 cursor-pointer"
+                        id="moments-tab-btn" data-tab="moments">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="M9.004 18q-2.506 0-4.255-1.745T3 12.004t1.745-4.255T8.996 6t4.255 1.745T15 11.996t-1.745 4.255T9.004 18M16 17.9v-1q1.75-.35 2.875-1.725T20 12t-1.125-3.175T16 7.1v-1q2.177.35 3.589 2.024T21 12t-1.412 3.876T16 17.9M9 17q2.075 0 3.538-1.462T14 12t-1.463-3.537T9 7T5.463 8.463T4 12t1.463 3.538T9 17"
+                                stroke-width="0.25" stroke="currentColor" />
+                        </svg>
+                        Moments
+                    </button>
+                    <button type="button"
+                        class="account-resources-tab-btn py-3 flex-1 w-auto h-full flex flex-row gap-x-1 items-center justify-center text-woodsmoke-400 cursor-pointer active"
+                        id="wishlist-tab-btn" data-tab="wishlist">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="M11.001 21q-.303 0-.61-.121q-.305-.121-.55-.364l-6.362-6.361q-.25-.248-.365-.548T3 12.996t.114-.616t.365-.551l8.338-8.345q.223-.222.528-.353T12.973 3h6.387q.69 0 1.162.48t.472 1.154v6.387q0 .332-.121.632t-.357.518l-8.364 8.345q-.242.242-.545.363T11 21m-.447-1.192q.192.192.452.192t.452-.192l8.363-8.35q.096-.096.135-.212q.038-.115.038-.23V4.635q0-.27-.183-.443q-.182-.173-.452-.173h-6.63l-8.537 8.523Q4 12.734 4 12.994t.192.452zm6.883-12.25q.424 0 .722-.292t.297-.708q0-.425-.295-.722t-.717-.297t-.714.295t-.293.716t.291.715t.709.293m-5.456 4.48"
+                                stroke-width="0.25" stroke="currentColor" />
+                        </svg>
+                        Wishlist
+                    </button>
+                </div>
+
+                <div id="account-resources-body" class="w-full h-[calc(100%-4rem)] flex-1 flex flex-col">
+                    <div id="account-photos-tab" class="hidden flex-col gap-y-2 w-full h-auto flex-1 account-resources-tab">
+                        <div id="account-galery-grid"
+                            class="grid grid-cols-3 grid-rows-3 gap-1 w-full h-auto min-w-0 flex-1">
+
+                        </div>
+                        <div id="upload-wrapper" class="relative w-full h-auto py-3 border-2 border-dashed border-mercury-300 rounded-md overflow-hidden">
+                            <label
+                                class="cursor-pointer w-full h-full flex flex-col items-center justify-center text-center text-woodsmoke-300 text-[0.75rem] gap-1">
+                                <input type="file" id="account-image-uploader" accept="image/png, image/jpeg"
+                                    multiple class="absolute inset-0 opacity-0 z-10 cursor-pointer" />
+                                <span class="w-[75%]">upload your photos here ...</span>
+                                <span class="w-[75%]">jpg, jpeg, png only – up to 15MB</span>
+                            </label>
+                        </div>
+                        <!-- <div class="account-galery-square aspect-square w-full h-full rounded-md"></div>
+                        <div class="account-galery-square aspect-square w-full h-full rounded-md"></div>
+                        <div class="account-galery-square aspect-square w-full h-full rounded-md"></div>
+                        <div class="account-galery-square aspect-square w-full h-full rounded-md"></div> -->
+                    </div>
+
+                    
+
+                    <div id="account-wishlist-tab" class="active-tab flex flex-col justify-between gap-y-2 w-full h-[100%] flex-1 overflow-auto account-resources-tab relative">
+                        <div id="account-wishlist-grid" class="max-h-[calc(100%-5.25rem)] grow-0 shrink-0">
+                        </div>
+                        <div id="wishlist-form-wrapper" class="w-full h-[4.75rem] shrink-0 grow-0 bg-white">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>

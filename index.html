@@ -11,7 +11,7 @@
 </head>
 
 <body class="flex flex-row font-funnel text-woodsmoke-950 text-[0.895rem] w-[100vw] h-[100vh]">
-    <div id="side-menu" class="w-auto h-auto flex flex-col items-center gap-y-[3rem] p-5">
+    <div id="side-menu" class="w-[7.5rem] h-[100vh] flex flex-col items-center gap-y-[3rem] p-5">
         <div id="brand-logo-container" class="side-menu-cta-container">
             <div id="brand-logo-img-container" class="w-[3.5rem] h-[3.5rem] flex items-center justify-center">
                 <img src="./assets/images/shewschats_logo.png" alt="" class="scale-80">
@@ -142,9 +142,9 @@
 
 
 
-    <div id="main-section-container" class="w-full h-full relative overflow-x-hidden overflow-y-hidden">
-        <section class="w-full h-full max-w-full max-h-full absolute top-0 left-0 z-100" id="checkup-section">
-            <div id="loading-window" class="hidden flex-col items-center justify-center w-full h-full bg-white">
+    <div id="main-section-container" class="w-[calc(100vw-7.5rem)] h-[100vh] relative overflow-x-hidden overflow-y-hidden">
+        <section class="w-[100%] h-[100vh] max-w-[100%] max-h-[100vh] absolute top-0 left-0 z-100" id="checkup-section">
+            <div id="loading-window" class="hidden flex-col items-center justify-center w-[100%] h-[100%] bg-white">
                 <div id="loading-window-svg-container" class="text-woodsmoke-300">
                     <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24">
                         <circle cx="4" cy="12" r="3" fill="currentColor" stroke-width="0.25" stroke="currentColor">
@@ -165,7 +165,7 @@
                     ...</p>
             </div>
 
-            <div id="login-window" class="hidden flex-col items-center justify-center w-full h-full">
+            <div id="login-window" class="hidden flex-col items-center justify-center w-[100%] h-[100%] bg-white">
                 <form action="" id="login-form" class="w-[400px] min-w-[400px] h-auto flex flex-col gap-y-6 py-5">
                     <div class="login-form-header">
                         <h3 class="text-3xl text-woodsmoke-950 font-extrabold">Log Into Your Account</h3>
@@ -337,7 +337,7 @@
                 </form>
             </div>
 
-            <div id="signup-window" class="hidden flex-col items-center justify-center w-full h-full">
+            <div id="signup-window" class="hidden flex-col items-center justify-center w-[100%] h-[100%] bg-white">
                 <form action="" id="signup-form" class="w-[400px] min-w-[400px] h-auto flex flex-col gap-y-6 py-5">
                     <div class="signup-form-header">
                         <h3 class="text-3xl text-woodsmoke-950 font-extrabold">Create an Account</h3>
@@ -606,7 +606,7 @@
                 </form>
             </div>
 
-            <div id="reset-password-window" class="hidden flex-col items-center justify-center w-full h-full">
+            <div id="reset-password-window" class="hidden flex-col items-center justify-center w-[100%] h-[100%] bg-white">
                 <form action="" id="reset-password-form"
                     class="w-[400px] min-w-[400px] h-auto flex flex-col gap-y-6 py-5">
                     <div class="reset-password-form-header">
@@ -687,35 +687,25 @@
         </section>
 
 
-        <section class="section main-section w-full h-full max-w-full max-h-full hidden" id="stats-section">
+        <section class="section main-section w-[100%] h-[100vh] max-w-[100%] max-h-[100vh] hidden" id="stats-section">
             Stats Section
         </section>
 
 
-        <section
-            class="section main-section w-full h-full max-w-full max-h-full hidden flex-row items-center justify-center"
-            id="account-section">
-            <div class="account-section-part flex h-full w-auto max-w-[30vw] p-5 flex-col gap-y-6 m-auto">
-                <div id="account-badge" class="w-full h-auto p-2 rounded-sm  flex flex-col gap-y-4">
-                    <div id="badge-header" class="flex flex-row gap-x-4 w-full h-auto">
-                        <div id="profile-wrapper" class="flex flex-row w-full h-auto items-center gap-x-4">
-                            <div id="profile-image-container"
-                                class="w-[6.5rem] h-[6.5rem] rounded-full bg-mercury-100 relative">
-                                <div id="account-mood-container" class="absolute bottom-0 right-0">
-                                    <p id="account-mood-icon" class="text-lg">🍒</p>
-                                </div>
+        <section class="section main-section w-[100%] h-[100vh] max-w-[100%] max-h-[100vh] flex flex-col items-center justify-center" id="account-section">
+            <div id="account-badge" class="w-auto min-w-[30vw] max-w-[30vw] h-[25vh] max-h-[25vh] flex flex-col py-7">
+                <div id="badge-header" class="flex flex-row gap-x-6 w-full h-[9vh]">
+                    <div id="profile-wrapper" class="flex flex-row w-full h-auto items-center gap-x-4">
+                        <div id="profile-image-container"
+                            class="w-auto h-full aspect-square rounded-full bg-mercury-100 relative">
+                            <div id="account-mood-container" class="absolute bottom-0 right-0">
+                                <p id="account-mood-icon" class="text-lg">🍒</p>
                             </div>
-                            <div id="profile-info-container"
-                                class="flex flex-col flex-1 h-full w-auto justify-center gap-y-[0.0625rem]">
-                                <div id="profile-info-name-age-wrapper" class="flex flex-row gap-x-4">
-                                    <h3 class="font-medium text-sm text-mercury-400 flex flex-row gap-x-1 items-center">
-                                        <span id="profile-info-name" class="inline-flex"></span>
-                                        <span id="profile-info-age" class="inline-flex"></span>
-                                        <span id="profile-info-location" class="inline-flex">• Findlay, OH</span>
-                                    </h3>
-                                </div>
-                                <div id="profile-info-username-wrapper" class="flex flex-row gap-x-4">
-                                    <h3 class="font-bold text-[1.2rem] flex flex-row gap-x-1 items-center">
+                        </div>
+                        <div id="profile-info-container" class="flex flex-col flex-1 justify-center gap-y-4 h-[9vh] w-[calc(100%-calc(9vh+4rem))]">
+                            <div class="flex flex-col justify-center gap-y-2 ">
+                                <div id="profile-info-username-wrapper" class="flex flex-row gap-x-4 h-auto">
+                                    <h3 class="font-semibold text-[1.2rem] flex flex-row gap-x-1 items-center leading-0">
                                         <span id="profile-info-username" class="font-funnel text-[1.25rem]"></span>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21"
                                             viewBox="0 0 24 24" class="text-pizza-500">
@@ -724,180 +714,188 @@
                                             </path>
                                         </svg>
                                     </h3>
-                                    <!-- <button id="to-edit-username-btn"
-                                        class="cursor-pointer text-pizza-600 hover:text-pizza-800 underline font-normal text-sm">
-                                        edit
-                                    </button>
-                                    <button id="to-save-username-btn"
-                                        class="cursor-pointer text-pizza-600 hover:text-pizza-800 underline font-normal text-sm hidden">
-                                        save
-                                    </button>
-                                    <button id="to-cancel-username-btn"
-                                        class="cursor-pointer text-woodsmoke-400 hover:text-woodsmoke-950 underline font-normal text-sm hidden">
-                                        cancel
-                                    </button>
-                                    <button id="to-share-profile-btn"
-                                        class="cursor-pointer text-woodsmoke-400 hover:text-woodsmoke-950 underline font-normal text-sm">
-                                        share
-                                    </button> -->
+                                    <div class="flex flex-row gap-x-1">
+                                        <button class="py-1 px-3 bg-mercury-100 text-woodsmoke-950 rounded-sm cursor-pointer font-bold" id="to-edit-profile-btn">
+                                            Edit Profile
+                                        </button>
+                                        <button class="py-1 px-3 bg-mercury-100 text-woodsmoke-950 rounded-sm cursor-pointer font-bold" id="to-share-profile-btn">
+                                            Share Profile
+                                        </button>
+                                    </div>
                                 </div>
                                 <div id="profile-info-shewid-wrapper">
-                                    <h5 class="text-mercury-400 text-sm">
+                                    <h5 class="text-mercury-400 text-[0.8rem] leading-0">
                                         SHEW ID:
-                                        <span id="profile-info-shewid" class="text-woodsmoke-950 font-semibold"></span>
+                                        <span id="profile-info-shewid" class="text-woodsmoke-950 font-medium"></span>
                                     </h5>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-
-                    <div id="badge-body" class="flex flex-col gap-y-2 w-full h-auto">
-                        <div id="profile-headline-container">
-                            <h4 id="profile-headline" class="font-bold text-[1.1rem]">🖐️Howdy! Let's forget time ever
-                                existed.</h4>
-                        </div>
-                        <div id="profile-bio-container" class="w-full h-auto">
-                            <div id="profile-bio-text-area"
-                                class="w-full max-h-[12.5rem] h-auto overflow-visible overflow-y-auto resize-none outline-none bg-transparent font-[inherit] whitespace-pre-wrap px-2 py-1 italic text-woodsmoke-700"
-                                contenteditable="false"
-                                data-placeholder="Let potential STEMs know that you can be the best companion ever ...">
+                            <div id="profile-info-name-age-wrapper" class="flex flex-row gap-x-4">
+                                <h3 class="font-medium text-sm text-mercury-400 flex flex-row gap-x-1 items-center">
+                                    <span id="profile-info-name" class="inline-flex"></span>
+                                    <span id="profile-info-age" class="inline-flex"></span>
+                                    <span id="profile-info-location" class="inline-flex">• Findlay, OH</span>
+                                </h3>
                             </div>
                         </div>
-                        <div id="profile-bio-display" class="flex flex-row justify-between">
-                            <!-- <div id="profile-bio-counter-container" class="flex flex-row text-sm text-mercury-400">
-                                <span>00</span>
-                                <span>/</span>
-                                <span>256</span>
-                            </div> -->
-                            <!-- <div id="profile-bio-ctas-container" class="flex flex-row gap-x-2 items-center justify-end">
-                                <button id="to-edit-bio-btn"
-                                    class="cursor-pointer text-pizza-600 hover:text-pizza-800 underline font-normal text-sm">
-                                    edit
-                                </button>
-                                <button id="to-save-bio-btn"
-                                    class="cursor-pointer text-pizza-600 hover:text-pizza-800 underline font-normal text-sm hidden">
-                                    save
-                                </button>
-                                <button id="to-cancel-bio-btn"
-                                    class="cursor-pointer text-woodsmoke-400 hover:text-woodsmoke-950 underline font-normal text-sm hidden">
-                                    cancel
-                                </button>
-                            </div> -->
-                        </div>
-                    </div>
-
-                    <div id="badge-footer" class="flex flex-col gap-y-2 w-full h-auto">
-                        <button
-                            class="flex flex-row items-center justify-center gap-x-2 flex-1 h-auto py-3 px-5 bg-mercury-50 rounded-md text-woodsmoke-950 font-bold cursor-pointer">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                <path fill="currentColor"
-                                    d="M4.808 20q-.343 0-.576-.232T4 19.192v-1.04q0-.332.13-.632t.349-.518L17.18 4.287q.153-.137.339-.212T17.907 4t.39.064t.35.228l1.067 1.074q.165.159.226.35q.06.19.06.38q0 .204-.068.39q-.069.185-.218.339L6.998 19.521q-.217.218-.518.348T5.848 20zM17.504 7.589L19 6.111L17.889 5l-1.477 1.496z"
-                                    stroke-width="0.25" stroke="currentColor" />
-                            </svg>
-                            Edit Profile
-                        </button>
-                        <!-- <button type="button" id="logout-btn"
-                            class="flex flex-row items-center justify-center gap-x-2 flex-1 h-auto py-3 px-5 rounded-md font-bold cursor-pointer bg-pizza-50 text-pizza-800">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                <path fill="currentColor"
-                                    d="M4 20V4h8.02v1H5v14h7.02v1zm12.462-4.461l-.702-.72l2.319-2.319H9.192v-1h8.887l-2.32-2.32l.702-.718L20 12z"
-                                    stroke-width="0.25" stroke="currentColor" />
-                            </svg>
-                            Log Out
-                        </button> -->
-                        <!-- <button type="button"
-                            class="flex flex-row items-center justify-center gap-x-2 flex-1 h-auto py-3 px-5 text-woodsmoke-950 rounded-md font-bold cursor-pointer bg-mercury-50">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                <path fill="currentColor"
-                                    d="M12.05 19.5q-3.139 0-5.344-2.19T4.5 12v-1.386l-2.1 2.1l-.708-.708L5 8.698l3.308 3.308l-.708.708l-2.1-2.1V12q0 2.712 1.907 4.606T12.05 18.5q.592 0 1.208-.121q.615-.121 1.196-.364l.75.75q-.738.358-1.537.546t-1.617.189M19 15.302l-3.308-3.308l.708-.707l2.1 2.1V12q0-2.711-1.907-4.606T11.95 5.5q-.592 0-1.208.121q-.615.121-1.196.363l-.75-.75q.739-.357 1.537-.546q.798-.188 1.617-.188q3.139 0 5.344 2.19T19.5 12v1.387l2.1-2.1l.708.707z"
-                                    stroke-width="0.25" stroke="currentColor" />
-                            </svg>
-                            Switch as STEM
-                        </button> -->
                     </div>
                 </div>
-
-                <div id="account-resources" class="w-full h-auto flex-1 flex flex-col gap-y-4">
-                    <div id="account-resources-head" class="w-full h-auto flex flex-row">
-                        <button type="button"
-                            class="account-resources-tab-btn py-3 flex-1 w-auto h-auto flex flex-row gap-x-1 items-center justify-center text-woodsmoke-400 cursor-pointer"
-                            id="photos-tab-btn" data-tab="photos">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
-                                <path fill="currentColor"
-                                    d="M9.154 13.692h8.692l-2.758-3.653l-2.453 3.077l-1.589-1.885zM8.116 17q-.691 0-1.153-.462T6.5 15.385V4.615q0-.69.463-1.153T8.116 3h10.769q.69 0 1.153.462t.462 1.153v10.77q0 .69-.462 1.152T18.884 17zm0-1h10.769q.23 0 .423-.192t.192-.423V4.615q0-.23-.192-.423T18.884 4H8.116q-.231 0-.424.192t-.192.423v10.77q0 .23.192.423t.423.192m-3 4q-.69 0-1.153-.462T3.5 18.385V6.615h1v11.77q0 .23.192.423t.423.192h11.77v1zM7.5 4v12z"
-                                    stroke-width="0.25" stroke="currentColor" />
-                            </svg>
-                            Photos
-                        </button>
-                        <button type="button"
-                            class="account-resources-tab-btn py-3 flex-1 w-auto h-auto flex flex-row gap-x-1 items-center justify-center text-woodsmoke-400 cursor-pointer"
-                            id="videos-tab-btn" data-tab="videos">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
-                                <path fill="currentColor"
-                                    d="M16.275 10.51q.292-.187.292-.51t-.292-.51l-3.836-2.47q-.298-.212-.619-.038t-.32.547v4.942q0 .373.32.547t.618-.037zM8.115 17q-.69 0-1.152-.462T6.5 15.385V4.615q0-.69.463-1.153T8.116 3h10.769q.69 0 1.153.462t.462 1.153v10.77q0 .69-.462 1.152T18.884 17zm0-1h10.77q.23 0 .423-.192t.192-.423V4.615q0-.23-.192-.423T18.884 4H8.116q-.231 0-.424.192t-.192.423v10.77q0 .23.192.423t.423.192m-3 4q-.69 0-1.153-.462T3.5 18.385V7.115q0-.213.143-.356T4 6.616t.357.143t.143.357v11.269q0 .23.192.423t.423.192h11.27q.213 0 .356.143t.144.357t-.144.357t-.356.143zM7.5 4v12z"
-                                    stroke-width="0.25" stroke="currentColor" />
-                            </svg>
-                            Videos
-                        </button>
-                        <button type="button"
-                            class="account-resources-tab-btn py-3 flex-1 w-auto h-auto flex flex-row gap-x-1 items-center justify-center text-woodsmoke-400 cursor-pointer"
-                            id="notes-tab-btn" data-tab="notes">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
-                                <path fill="currentColor"
-                                    d="M12 13q-.846 0-1.423-.577T10 11V5q0-.846.577-1.423T12 3t1.423.577T14 5v6q0 .846-.577 1.423T12 13m-.5 7v-3.017q-2.165-.19-3.716-1.72q-1.551-1.529-1.748-3.738q-.03-.214.11-.37Q6.286 11 6.5 11t.357.153t.185.366q.197 1.923 1.623 3.202T12 16q1.935 0 3.348-1.291q1.413-1.292 1.61-3.19q.042-.213.185-.366T17.5 11t.354.156t.11.369q-.197 2.16-1.735 3.704T12.5 16.983V20q0 .214-.143.357T12 20.5t-.357-.143T11.5 20m.5-8q.425 0 .713-.288T13 11V5q0-.425-.288-.712T12 4t-.712.288T11 5v6q0 .425.288.713T12 12"
-                                    stroke-width="0.25" stroke="currentColor" />
-                            </svg>
-                            Notes
-                        </button>
-                        <button type="button"
-                            class="account-resources-tab-btn py-3 flex-1 w-auto h-auto flex flex-row gap-x-1 items-center justify-center text-woodsmoke-400 cursor-pointer"
-                            id="moments-tab-btn" data-tab="moments">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
-                                <path fill="currentColor"
-                                    d="M9.004 18q-2.506 0-4.255-1.745T3 12.004t1.745-4.255T8.996 6t4.255 1.745T15 11.996t-1.745 4.255T9.004 18M16 17.9v-1q1.75-.35 2.875-1.725T20 12t-1.125-3.175T16 7.1v-1q2.177.35 3.589 2.024T21 12t-1.412 3.876T16 17.9M9 17q2.075 0 3.538-1.462T14 12t-1.463-3.537T9 7T5.463 8.463T4 12t1.463 3.538T9 17"
-                                    stroke-width="0.25" stroke="currentColor" />
-                            </svg>
-                            Moments
-                        </button>
-                        <button type="button"
-                            class="account-resources-tab-btn py-3 flex-1 w-auto h-auto flex flex-row gap-x-1 items-center justify-center text-woodsmoke-400 cursor-pointer active"
-                            id="wishlist-tab-btn" data-tab="wishlist">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
-                                <path fill="currentColor" d="M11.001 21q-.303 0-.61-.121q-.305-.121-.55-.364l-6.362-6.361q-.25-.248-.365-.548T3 12.996t.114-.616t.365-.551l8.338-8.345q.223-.222.528-.353T12.973 3h6.387q.69 0 1.162.48t.472 1.154v6.387q0 .332-.121.632t-.357.518l-8.364 8.345q-.242.242-.545.363T11 21m-.447-1.192q.192.192.452.192t.452-.192l8.363-8.35q.096-.096.135-.212q.038-.115.038-.23V4.635q0-.27-.183-.443q-.182-.173-.452-.173h-6.63l-8.537 8.523Q4 12.734 4 12.994t.192.452zm6.883-12.25q.424 0 .722-.292t.297-.708q0-.425-.295-.722t-.717-.297t-.714.295t-.293.716t.291.715t.709.293m-5.456 4.48" stroke-width="0.25" stroke="currentColor" />
-                            </svg>
-                            Wishlist
-                        </button>
+                <div id="badge-body" class="flex flex-col gap-y-2 w-[100%] h-[calc(25vh-calc(9vh+3.5rem))] pt-3.5">
+                    <div id="profile-headline-container" class="h-10 flex flex-row items-center">
+                        <h4 id="profile-headline" class="font-bold text-[1.1rem]">🖐️Howdy! Let's forget time ever existed.</h4>
                     </div>
-                    
-                    <div id="account-resources-body" class="w-full h-auto flex-1 flex flex-col">
-                        <div id="account-photos-tab" class="hidden flex-col gap-y-2 w-full h-auto flex-1 account-resources-tab">
-                            <div id="account-galery-grid" class="grid grid-cols-3 grid-rows-3 gap-1 w-full h-auto min-w-0 flex-1">
-
-                            </div>
-                            <div id="upload-wrapper" class="relative w-full h-auto py-3 border-2 border-dashed border-mercury-300 rounded-md overflow-hidden">
-                                <label class="cursor-pointer w-full h-full flex flex-col items-center justify-center text-center text-woodsmoke-300 text-[0.75rem] gap-1">
-                                    <input type="file" id="account-image-uploader" accept="image/png, image/jpeg"
-                                        multiple class="absolute inset-0 opacity-0 z-10 cursor-pointer" />
-                                    <span class="w-[75%]">upload your photos here ...</span>
-                                    <span class="w-[75%]">jpg, jpeg, png only – up to 15MB</span>
-                                </label>
-                            </div>
-                            <!-- <div class="account-galery-square aspect-square w-full h-full rounded-md"></div>
-                            <div class="account-galery-square aspect-square w-full h-full rounded-md"></div>
-                            <div class="account-galery-square aspect-square w-full h-full rounded-md"></div>
-                            <div class="account-galery-square aspect-square w-full h-full rounded-md"></div> -->
+                    <div id="profile-bio-container" class="w-[100%] h-[calc(100%-2.5rem)] flex flex-col">
+                        <div id="profile-bio-text-area"
+                            class="w-full h-[10rem] overflow-y-auto resize-none outline-none bg-transparent font-[inherit] py-1 italic text-woodsmoke-700"
+                            contenteditable="false"
+                            data-placeholder="Let potential STEMs know that you can be the best companion ever ...">
                         </div>
-                        <div id="account-videos-tab" class="hidden grid-cols-3 account-resources-tab">Videos Tab</div>
-                        <div id="account-notes-tab" class="hidden grid-cols-3 account-resources-tab">Notes Tab</div>
-                        <div id="account-moments-tab" class="hidden grid-cols-3 account-resources-tab">Moments tab</div>
-                        <div id="account-wishlist-tab" class="active-tab flex flex-col gap-y-2 w-full h-auto account-resources-tab">
-                            <div id="wishlist-form-wrapper" class="w-full h-auto">
-                                <form action="">
-                                    <div id="wishlist-form-left-part">
-                                        <input type="text" id="wishlist-input" placeholder="paste your item's link in here ...">
-                                    </div>
-                                </form>
+                    </div>
+                </div>
+            </div>
+            <div id="account-resources" class="w-auto min-w-[30vw] h-[75vh] max-h-[75vh] flex flex-col">
+                <div id="account-resources-head" class="w-full h-12 flex flex-row">
+                    <button type="button" class="account-resources-tab-btn py-3 flex-1 w-auto h-full flex flex-row gap-x-1 items-center justify-center text-woodsmoke-400 cursor-pointer" id="photos-tab-btn" data-tab="photos">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="M9.154 13.692h8.692l-2.758-3.653l-2.453 3.077l-1.589-1.885zM8.116 17q-.691 0-1.153-.462T6.5 15.385V4.615q0-.69.463-1.153T8.116 3h10.769q.69 0 1.153.462t.462 1.153v10.77q0 .69-.462 1.152T18.884 17zm0-1h10.769q.23 0 .423-.192t.192-.423V4.615q0-.23-.192-.423T18.884 4H8.116q-.231 0-.424.192t-.192.423v10.77q0 .23.192.423t.423.192m-3 4q-.69 0-1.153-.462T3.5 18.385V6.615h1v11.77q0 .23.192.423t.423.192h11.77v1zM7.5 4v12z"
+                                stroke-width="0.25" stroke="currentColor" />
+                        </svg>
+                        Photos
+                    </button>
+                    <button type="button"
+                        class="account-resources-tab-btn py-3 flex-1 w-auto h-full flex flex-row gap-x-1 items-center justify-center text-woodsmoke-400 cursor-pointer"
+                        id="videos-tab-btn" data-tab="videos">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="M16.275 10.51q.292-.187.292-.51t-.292-.51l-3.836-2.47q-.298-.212-.619-.038t-.32.547v4.942q0 .373.32.547t.618-.037zM8.115 17q-.69 0-1.152-.462T6.5 15.385V4.615q0-.69.463-1.153T8.116 3h10.769q.69 0 1.153.462t.462 1.153v10.77q0 .69-.462 1.152T18.884 17zm0-1h10.77q.23 0 .423-.192t.192-.423V4.615q0-.23-.192-.423T18.884 4H8.116q-.231 0-.424.192t-.192.423v10.77q0 .23.192.423t.423.192m-3 4q-.69 0-1.153-.462T3.5 18.385V7.115q0-.213.143-.356T4 6.616t.357.143t.143.357v11.269q0 .23.192.423t.423.192h11.27q.213 0 .356.143t.144.357t-.144.357t-.356.143zM7.5 4v12z"
+                                stroke-width="0.25" stroke="currentColor" />
+                        </svg>
+                        Videos
+                    </button>
+                    <button type="button"
+                        class="account-resources-tab-btn py-3 flex-1 w-auto h-full flex flex-row gap-x-1 items-center justify-center text-woodsmoke-400 cursor-pointer"
+                        id="notes-tab-btn" data-tab="notes">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="M12 13q-.846 0-1.423-.577T10 11V5q0-.846.577-1.423T12 3t1.423.577T14 5v6q0 .846-.577 1.423T12 13m-.5 7v-3.017q-2.165-.19-3.716-1.72q-1.551-1.529-1.748-3.738q-.03-.214.11-.37Q6.286 11 6.5 11t.357.153t.185.366q.197 1.923 1.623 3.202T12 16q1.935 0 3.348-1.291q1.413-1.292 1.61-3.19q.042-.213.185-.366T17.5 11t.354.156t.11.369q-.197 2.16-1.735 3.704T12.5 16.983V20q0 .214-.143.357T12 20.5t-.357-.143T11.5 20m.5-8q.425 0 .713-.288T13 11V5q0-.425-.288-.712T12 4t-.712.288T11 5v6q0 .425.288.713T12 12"
+                                stroke-width="0.25" stroke="currentColor" />
+                        </svg>
+                        Notes
+                    </button>
+                    <button type="button"
+                        class="account-resources-tab-btn py-3 flex-1 w-auto h-full flex flex-row gap-x-1 items-center justify-center text-woodsmoke-400 cursor-pointer"
+                        id="moments-tab-btn" data-tab="moments">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="M9.004 18q-2.506 0-4.255-1.745T3 12.004t1.745-4.255T8.996 6t4.255 1.745T15 11.996t-1.745 4.255T9.004 18M16 17.9v-1q1.75-.35 2.875-1.725T20 12t-1.125-3.175T16 7.1v-1q2.177.35 3.589 2.024T21 12t-1.412 3.876T16 17.9M9 17q2.075 0 3.538-1.462T14 12t-1.463-3.537T9 7T5.463 8.463T4 12t1.463 3.538T9 17"
+                                stroke-width="0.25" stroke="currentColor" />
+                        </svg>
+                        Moments
+                    </button>
+                    <button type="button"
+                        class="account-resources-tab-btn py-3 flex-1 w-auto h-full flex flex-row gap-x-1 items-center justify-center text-woodsmoke-400 cursor-pointer active"
+                        id="wishlist-tab-btn" data-tab="wishlists">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="M11.001 21q-.303 0-.61-.121q-.305-.121-.55-.364l-6.362-6.361q-.25-.248-.365-.548T3 12.996t.114-.616t.365-.551l8.338-8.345q.223-.222.528-.353T12.973 3h6.387q.69 0 1.162.48t.472 1.154v6.387q0 .332-.121.632t-.357.518l-8.364 8.345q-.242.242-.545.363T11 21m-.447-1.192q.192.192.452.192t.452-.192l8.363-8.35q.096-.096.135-.212q.038-.115.038-.23V4.635q0-.27-.183-.443q-.182-.173-.452-.173h-6.63l-8.537 8.523Q4 12.734 4 12.994t.192.452zm6.883-12.25q.424 0 .722-.292t.297-.708q0-.425-.295-.722t-.717-.297t-.714.295t-.293.716t.291.715t.709.293m-5.456 4.48"
+                                stroke-width="0.25" stroke="currentColor" />
+                        </svg>
+                        Wishlist
+                    </button>
+                </div>
+                <div id="account-resources-body" class="w-full h-[calc(100%-3rem)] flex flex-col pb-[1.75rem]">
+                    <div id="account-photos-tab" class="hidden flex-col gap-y-2 w-full h-full account-resources-tab" data-tab="photos">
+                        <div id="gallery-info-bar" class="account-tab-info-bar h-12 w-full flex flex-row justify-between items-center">
+                            <div id="gallery-info-bar-datas-container" class="h-12 flex-1 flex flex-row gap-x-4">
+                                <div id="gallery-count-info-case" class="gallery-info-case w-auto min-w-20 h-full flex flex-col justify-center">
+                                    <span class="font-bold" id="gallery-count-info"></span>
+                                    <span class="font-medium text-woodsmoke-300 text-sm" id="gallery-count-info-max"></span>
+                                </div>
+                                <div id="gallery-storage-info-case" class="gallery-info-case w-auto min-w-20 h-full flex flex-col justify-center">
+                                    <span class="font-bold" id="gallery-storage-info"></span>
+                                    <span class="font-medium text-woodsmoke-300 text-sm" id="gallery-storage-info-max"></span>
+                                </div>
                             </div>
+                            <div id="gallery-info-bar-upgrade-btn-container" class="w-auto h-auto ml-1.5 flex flex-row gap-x-2">
+                                <button title="Refresh datas" class="aspect-square flex items-center justify-center h-12 text-woodsmoke-950 hover:bg-mercury-100 font-bold cursor-pointer rounded-md">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                                        <path fill="currentColor" d="M12.077 19q-2.931 0-4.966-2.033q-2.034-2.034-2.034-4.964t2.034-4.966T12.077 5q1.783 0 3.339.847q1.555.847 2.507 2.365V5.5q0-.213.144-.356T18.424 5t.356.144t.143.356v3.923q0 .343-.232.576t-.576.232h-3.923q-.212 0-.356-.144t-.144-.357t.144-.356t.356-.143h3.2q-.78-1.496-2.197-2.364Q13.78 6 12.077 6q-2.5 0-4.25 1.75T6.077 12t1.75 4.25t4.25 1.75q1.787 0 3.271-.968q1.485-.969 2.202-2.573q.085-.196.274-.275q.19-.08.388-.013q.211.067.28.275t-.015.404q-.833 1.885-2.56 3.017T12.077 19" stroke-width="0.25" stroke="currentColor" />
+                                    </svg>
+                                </button>
+                                <a href="#" class="text-pizza-600 font-bold underline flex justify-center items-center">Upgrade</a>
+                            </div>
+                        </div>
+                        <div id="account-galery-grid" class="h-[calc(100%-7rem)] max-h-[calc(100%-7rem)] grow-0 shrink-0"></div>
+                        <div id="upload-wrapper" class="relative w-full min-h-12 h-12 border-2 border-dashed border-mercury-300 rounded-md overflow-hidden">
+                            <label class="cursor-pointer w-full h-full flex flex-col items-center justify-center text-center text-woodsmoke-300 text-[0.75rem] gap-1">
+                                <input type="file" id="account-image-uploader" accept="image/png, image/jpeg"
+                                    multiple class="absolute inset-0 opacity-0 z-10 cursor-pointer" />
+                                <span class="w-[100%]">upload your photos here. jpg, jpeg, png only – up to 15MB</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div id="account-videos-tab" class="hidden account-resources-tab" data-tab="videos">Videos Tab</div>
+
+                    <div id="account-notes-tab" class="hidden account-resources-tab" data-tab="notes">Notes Tab</div>
+
+                    <div id="account-moments-tab" class="hidden account-resources-tab" data-tab="moments">Moments tab</div>
+
+                    <div id="account-wishlists-tab" class="flex flex-col gap-y-2 w-full h-full account-resources-tab active" data-tab="wishlists">
+                        <div id="wishist-info-bar" class="account-tab-info-bar h-12 w-full flex flex-row justify-between items-center">
+                            <div id="wishlist-info-bar-datas-container" class="h-12 flex-1 flex flex-row gap-x-4">
+                                <div id="wishlist-count-info-case" class="wishlist-info-case w-auto min-w-20 h-full flex flex-col justify-center">
+                                    <span class="font-bold" id="wishlist-count-info"></span>
+                                    <span class="font-medium text-woodsmoke-300 text-sm" id="wishlist-count-info-max"></span>
+                                </div>
+                                <div id="wishlist-value-info-case" class="wishlist-info-case w-auto min-w-20 h-full flex flex-col justify-center">
+                                    <span class="font-bold" id="wishlist-subtotal-info"></span>
+                                    <span class="font-medium text-woodsmoke-300 text-sm" id="wishlist-subtotal-info-max"></span>
+                                </div>
+                            </div>
+                            <div id="wishlist-info-bar-upgrade-btn-container" class="w-auto h-auto ml-1.5 flex flex-row gap-x-2">
+                                <button title="Refresh datas" class="aspect-square flex items-center justify-center h-12 text-woodsmoke-950 hover:bg-mercury-100 font-bold cursor-pointer rounded-md">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                                        <path fill="currentColor" d="M12.077 19q-2.931 0-4.966-2.033q-2.034-2.034-2.034-4.964t2.034-4.966T12.077 5q1.783 0 3.339.847q1.555.847 2.507 2.365V5.5q0-.213.144-.356T18.424 5t.356.144t.143.356v3.923q0 .343-.232.576t-.576.232h-3.923q-.212 0-.356-.144t-.144-.357t.144-.356t.356-.143h3.2q-.78-1.496-2.197-2.364Q13.78 6 12.077 6q-2.5 0-4.25 1.75T6.077 12t1.75 4.25t4.25 1.75q1.787 0 3.271-.968q1.485-.969 2.202-2.573q.085-.196.274-.275q.19-.08.388-.013q.211.067.28.275t-.015.404q-.833 1.885-2.56 3.017T12.077 19" stroke-width="0.25" stroke="currentColor" />
+                                    </svg>
+                                </button>
+                                <a href="#" class="text-pizza-600 font-bold underline flex justify-center items-center">Upgrade</a>
+                            </div>
+                        </div>
+                        <div id="account-wishlist-grid" class="h-[calc(100%-7rem)] max-h-[calc(100%-7rem)] grow-0 shrink-0">
+                        </div>
+                        <div id="wishlist-form-wrapper" class="w-full h-12 shrink-0 grow-0 bg-white">
+                            <form action="" class="w-full h-full flex">
+                                <div id="form-right-left-part-wrapper" class="w-full h-full flex flex-row gap-x-2">
+                                    <div id="wishlist-form-left-part"
+                                        class="flex flex-row items-center justify-between gap-x-2 w-full h-12 border border-mercury-200 rounded-md px-3">
+                                        <input type="text" id="wishlist-input"
+                                            placeholder="paste your item's link in here ..."
+                                            class="outline-0 h-full w-auto flex-1">
+                                        <button id="paste-marketplace-link-btn" class="cursor-pointer">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" class="">
+                                                <path fill="currentColor"
+                                                    d="M5.616 20q-.667 0-1.141-.475T4 18.386V5.615q0-.666.475-1.14T5.615 4h4.637q.14-.586.623-.985q.483-.4 1.125-.4q.654 0 1.134.4q.48.398.62.985h4.63q.667 0 1.142.475T20 5.615v12.77q0 .666-.475 1.14t-1.14.475zm0-1h12.769q.23 0 .423-.192t.192-.424V5.616q0-.231-.192-.424T18.384 5H16v1.423q0 .343-.23.576t-.57.232H8.8q-.34 0-.57-.232T8 6.423V5H5.616q-.231 0-.424.192T5 5.616v12.769q0 .23.192.423t.423.192m6.388-13.77q.345 0 .575-.232q.23-.233.23-.578t-.233-.575t-.578-.23t-.575.234t-.23.578t.234.574t.577.23"
+                                                    stroke-width="0.25" stroke="currentColor" />
+                                            </svg>
+                                        </button>
+                                        <div id="wishlist-market-selector-wrapper">
+                                            <select id="marketplace" class="rounded-md cursor-pointer outline-0">
+                                                <option value="amazon">Amazon</option>
+                                                <option value="walmart">Walmart</option>
+                                                <option value="ebay">eBay</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div id="wishlist-form-right-part" class="flex items-center h-12 w-auto">
+                                        <button type="button" disabled id="wishlist-parse-link-btn"
+                                            class="w-auto text-nowrap h-full px-5 bg-pizza-200 text-pizza-950 font-bold cursor-not-allowed opacity-50 rounded-md">List
+                                            Item</button>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>

@@ -13,7 +13,7 @@ const VALID_TYPES = ['image/jpeg', 'image/png'];
  */
 function createImageSquare(tempURL, filePath, showDelete = true, isUploading = false) {
     const div = document.createElement('div');
-    div.className = 'account-galery-square aspect-square w-full h-full rounded-md relative overflow-hidden bg-cover bg-center';
+    div.className = 'account-galery-square aspect-square w-[calc(100%/3)] h-auto rounded-md relative overflow-hidden bg-cover bg-center';
     div.style.backgroundImage = `url('${tempURL}')`;
     div.style.opacity = isUploading ? '0.5' : '1';
 
@@ -85,7 +85,9 @@ function createImageSquare(tempURL, filePath, showDelete = true, isUploading = f
 
                 // 3. Remove the image element from the DOM
                 div.remove();
+                reflowGalleryGrid();
                 updatePhotoCounter();
+
 
             } catch (err) {
                 console.error("❌ Failed to delete image:", err.message, err);
@@ -120,16 +122,30 @@ function createImageSquare(tempURL, filePath, showDelete = true, isUploading = f
 /**
  * Updates the photo counter displayed on the photos tab button.
  */
-function updatePhotoCounter() {
+async function updatePhotoCounter() {
     const galleryGrid = document.getElementById('account-galery-grid');
-    const count = galleryGrid?.children?.length || 0;
-    const max = 9; // Default cap; can change later based on plan
+    const allSquares = galleryGrid?.querySelectorAll('.account-galery-square') || [];
+    const count = allSquares.length;
 
-    const btn = document.getElementById('photos-tab-btn');
-    if (btn) {
-        btn.textContent = `Photos (${count}/${max})`;
+    let max = 9; // fallback
+    try {
+        const user = auth.currentUser;
+        if (user) {
+            const doc = await db.collection('users').doc(user.uid).get();
+            max = doc.data()?.accountTiers?.max?.photos?.count || 9;
+        }
+    } catch (err) {
+        console.warn('⚠️ Could not fetch max photo count from accountTiers:', err.message);
     }
+
+    // Update info bar values
+    const countInfo = document.getElementById('gallery-count-info');
+    const countInfoMax = document.getElementById('gallery-count-info-max');
+
+    if (countInfo) countInfo.textContent = `${count} photo(s)`;
+    if (countInfoMax) countInfoMax.textContent = `out of ${max}`;
 }
+
 
 /**
  * Handles the file upload process when a user selects images.
@@ -169,8 +185,9 @@ async function handleFileUpload(event) {
         }
     }
 
+    const currentCount = galleryGrid.querySelectorAll('.account-galery-square').length;
     const MAX_PHOTOS = 9;
-    const remainingSlots = MAX_PHOTOS - validPhotos.length;
+    const remainingSlots = MAX_PHOTOS - currentCount;
 
     if (remainingSlots <= 0) {
         window.alert("You’ve reached the photo limit. Delete one before uploading new ones.");
@@ -189,7 +206,7 @@ async function handleFileUpload(event) {
         const tempURL = URL.createObjectURL(file);
         const filePath = `users/${user.uid}/photos/${Date.now()}_${file.name}`; // Define filePath here
         const square = createImageSquare(tempURL, filePath, true, true); // Pass filePath during upload
-        galleryGrid.appendChild(square);
+        appendImageToGallery(square);
 
         try {
             const fileRef = storage.ref(filePath);
@@ -225,6 +242,27 @@ async function handleFileUpload(event) {
     event.target.value = ''; // reset input field
 }
 
+function reflowGalleryGrid() {
+    const galleryGrid = document.getElementById('account-galery-grid');
+    if (!galleryGrid) return;
+
+    const allSquares = Array.from(galleryGrid.querySelectorAll('.account-galery-square'));
+
+    // Clear the grid
+    galleryGrid.innerHTML = '';
+
+    let row;
+    allSquares.forEach((square, index) => {
+        if (index % 3 === 0) {
+            row = document.createElement('div');
+            row.className = 'gallery-row flex flex-row gap-1 w-full';
+            galleryGrid.appendChild(row);
+        }
+
+        row.appendChild(square);
+    });
+}
+
 /**
  * Initializes the image uploader by attaching the event listener.
  */
@@ -232,5 +270,22 @@ export function initAccountGalleryUpload() {
     const input = document.getElementById('account-image-uploader');
     if (input) input.addEventListener('change', handleFileUpload);
 }
+
+function appendImageToGallery(square) {
+    const galleryGrid = document.getElementById('account-galery-grid');
+    if (!galleryGrid) return;
+
+    let rows = galleryGrid.querySelectorAll('.gallery-row');
+    let lastRow = rows[rows.length - 1];
+
+    if (!lastRow || lastRow.children.length >= 3) {
+        lastRow = document.createElement('div');
+        lastRow.className = 'gallery-row flex flex-row gap-1 w-full';
+        galleryGrid.appendChild(lastRow);
+    }
+
+    lastRow.appendChild(square);
+}
+
 
 export { createImageSquare, updatePhotoCounter };

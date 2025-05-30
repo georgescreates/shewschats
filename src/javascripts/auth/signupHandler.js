@@ -430,6 +430,7 @@ form.addEventListener('submit', async (e) => {
         }
 
         const shewId = generateShewID();
+        const creationTime = firebase.firestore.FieldValue.serverTimestamp();
 
         await db.collection('users').doc(user.uid).set({
             email: {
@@ -441,7 +442,7 @@ form.addEventListener('submit', async (e) => {
                 shewID: shewId
             },
             creation: {
-                createdAt: firebase.firestore.FieldValue.serverTimestamp()
+                createdAt: creationTime
             },
             firstName: firstNameInput.value.trim(),
             dob: firebase.firestore.Timestamp.fromDate(new Date(dobInput.value)),
@@ -459,7 +460,26 @@ form.addEventListener('submit', async (e) => {
                 isOnline: false
             },
             profileImages: [],
-            bio: ""
+            bio: "",
+            accountTiers: {
+                level: "basic",
+                upgradedAt: creationTime,
+                max: {
+                    photos: {
+                        count: 9,
+                        singleStorage: 15360
+                    },
+                    videos: {
+                        count: 6,
+                        singleDuration: 120,
+                        singleStorage: 30720
+                    },
+                    wishlist: {
+                        count: 9,
+                        value: 4000
+                    }
+                }
+            }
         });
 
 
