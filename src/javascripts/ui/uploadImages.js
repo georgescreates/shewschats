@@ -13,7 +13,7 @@ const VALID_TYPES = ['image/jpeg', 'image/png'];
  */
 function createImageSquare(tempURL, filePath, showDelete = true, isUploading = false) {
     const div = document.createElement('div');
-    div.className = 'account-galery-square aspect-square w-[calc(100%/3)] h-auto rounded-md relative overflow-hidden bg-cover bg-center';
+    div.className = 'account-galery-square aspect-square w-[calc(100%/3)] h-auto rounded-sm relative overflow-hidden bg-cover bg-center';
     div.style.backgroundImage = `url('${tempURL}')`;
     div.style.opacity = isUploading ? '0.5' : '1';
 

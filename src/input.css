@@ -51,6 +51,8 @@
     --color-cinnabar-800: #962e1e;
     --color-cinnabar-900: #7d2c1f;
     --color-cinnabar-950: #44130b;
+
+    --account--section-width: 30vw;
 }
 
 
@@ -159,7 +161,7 @@
     width: 100%;
 } */
 
-#account-wishlist-grid, #account-galery-grid{
+#account-wishlist-grid, #account-galery-grid, #account-videos-grid{
     display: flex;
     flex-direction: column;
     row-gap: 0.25rem;
@@ -170,7 +172,7 @@
     flex-shrink: 0;
 }
 
-#account-wishlist-grid::-webkit-scrollbar, #account-galery-grid::-webkit-scrollbar{
+#account-wishlist-grid::-webkit-scrollbar, #account-galery-grid::-webkit-scrollbar, #account-videos-grid::-webkit-scrollbar{
     display: none;
 }
 
@@ -183,4 +185,8 @@
     height: auto;
     min-height: 15rem;
     /* max-height: 15rem; */
+}
+
+.videos-row{
+    height: calc((var(--account--section-width)/3) * 1.777778);
 }
